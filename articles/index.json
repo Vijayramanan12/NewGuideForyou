@@ -1,6 +1,22 @@
 {
   "articles": [
     {
+      "slug": "neuromorphic-computing-brain-inspired-hardware",
+      "title": "Neuromorphic Computing Explained: How Brain-Inspired Hardware Computes with Spikes",
+      "author": "Vijayaramanan",
+      "date": "15 Aug 2026",
+      "category": "Emerging Technologies",
+      "tags": [
+        "neuromorphic computing",
+        "spiking neural networks",
+        "AI hardware",
+        "edge computing",
+        "brain-inspired computing"
+      ],
+      "readTime": "14 min read",
+      "excerpt": "Neuromorphic computers replace clocked, data-hungry processing with sparse spikes, local memory, and event-driven dynamics. This guide explains the models, chips, trade-offs, and engineering opportunities behind the architecture."
+    },
+    {
       "slug": "autonomous-ai-agents-system-architecture",
       "title": "Autonomous AI Agents: The System Architecture Beyond the LLM",
       "author": "Vijayaramanan",
