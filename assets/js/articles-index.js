@@ -26,7 +26,7 @@ async function initArticlesIndex() {
     container.innerHTML = articles.map(article => `
       <li class="post-item">
         <h3 class="post-title">
-          <a href="article.html?slug=${article.slug}">${article.title}</a>
+          <a href="article?slug=${article.slug}">${article.title}</a>
         </h3>
         <div class="post-meta">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="18" y2="10"></line></svg>
@@ -34,7 +34,7 @@ async function initArticlesIndex() {
         </div>
         <p class="post-description">${article.excerpt || article.description}</p>
         <div class="post-tags">
-          ${(article.tags || [article.category || 'research']).map(tag => `<a href="posts.html#tags" class="tag-pill">#${tag.toLowerCase().replace(/\s+/g, '-')}</a>`).join(' ')}
+          ${(article.tags || [article.category || 'research']).map(tag => `<a href="posts#tags" class="tag-pill">#${tag.toLowerCase().replace(/\s+/g, '-')}</a>`).join(' ')}
         </div>
       </li>
     `).join('');
@@ -69,7 +69,7 @@ async function initPostsGrid() {
           <div class="card-top">
             <span class="card-category">${article.category || 'Research Deep Dive'}</span>
             <div class="card-title-row">
-              <a href="article.html?slug=${article.slug}" class="card-title">
+              <a href="article?slug=${article.slug}" class="card-title">
                 ${article.title}
               </a>
               <span class="card-arrow">&#8599;</span>
