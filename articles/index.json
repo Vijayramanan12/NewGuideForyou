@@ -1,6 +1,21 @@
 {
   "articles": [
     {
+      "slug": "passive-radiative-cooling-physics-without-power",
+      "title": "Passive Radiative Cooling: The Physics of Cooling Without Power",
+      "author": "Vijayaramanan",
+      "date": "15 Aug 2026",
+      "category": "Applied Engineering & Physics",
+      "tags": [
+        "radiative cooling",
+        "thermal engineering",
+        "photonics",
+        "sustainable technology"
+      ],
+      "readTime": "10 min read",
+      "excerpt": "How engineered surfaces reflect sunlight, emit infrared radiation through the atmospheric window, and reject heat to space without a compressor, refrigerant, or electrical input."
+    },
+    {
       "slug": "neuromorphic-computing-brain-inspired-hardware",
       "title": "Neuromorphic Computing Explained: How Brain-Inspired Hardware Computes with Spikes",
       "author": "Vijayaramanan",
