@@ -14,7 +14,6 @@
         "AI safety"
       ],
       "readTime": "15 min read",
-      "coverImage": "assets/images/quantum-gravity.svg",
       "excerpt": "An autonomous AI agent is not a larger prompt wrapped around an LLM. It is a closed-loop system combining state, planning, memory, tools, permissions, evaluation, and human oversight. This guide explains how those layers fit together—and where production systems fail."
     },
     {
@@ -31,7 +30,6 @@
         "corrosion science"
       ],
       "readTime": "14 min read",
-      "coverImage": "assets/images/super-steel.svg",
       "excerpt": "A new generation of corrosion-resistant “super steel” could replace selected titanium components in PEM electrolyzers, cutting material costs while surviving high-voltage, chloride-rich conditions."
     },
     {
@@ -47,7 +45,6 @@
         "Field Propulsion"
       ],
       "readTime": "11 min read",
-      "coverImage": "assets/images/warp-metric.svg",
       "excerpt": "Analyzing physical energy condition modifications, Lentz positive-energy soliton solutions, and pulsed electromagnetic field generation for sub-light and superluminal metric bubbles."
     },
     {
@@ -63,7 +60,6 @@
         "Quantum Vacuum"
       ],
       "readTime": "8 min read",
-      "coverImage": "assets/images/quantum-gravity.svg",
       "excerpt": "A comprehensive investigation into the theoretical paradigms, electromagnetic field coupling, and metric distortion equations governing non-Newtonian propulsion and gravitational shielding."
     }
   ]
