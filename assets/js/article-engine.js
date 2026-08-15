@@ -120,10 +120,6 @@ function renderScientificMarkdown(markdown) {
   const headings = [];
   let html = markdown;
 
-  // 0. Strip manual Table of Contents markdown blocks (since TOC is dynamically rendered by the engine)
-  html = html.replace(/^#{1,3}\s+Table\s+of\s+Contents[\s\S]*?(?=\n#{1,3}\s+[^#]|\n\n\n|$)/im, '');
-  html = html.replace(/^#{1,3}\s+Contents[\s\S]*?(?=\n#{1,3}\s+[^#]|\n\n\n|$)/im, '');
-
   // 1. Display Equations (\[ ... \] or $$ ... $$)
   html = html.replace(/(\\\[[\s\S]*?\\\]|\$\$[\s\S]*?\$\$)/g, (match) => {
     let formula = match.trim();
@@ -173,7 +169,7 @@ function renderScientificMarkdown(markdown) {
       .replace(/[^\w\s-]/g, '')
       .replace(/\s+/g, '-');
 
-    if (depth >= 2 && depth <= 3 && !/^table\s+of\s+contents$/i.test(cleanText) && !/^contents$/i.test(cleanText)) {
+    if (depth >= 2 && depth <= 3) {
       headings.push({ depth, text: cleanText, id: slug });
     }
     return `<h${depth} id="${slug}">${parseInlineMarkdown(cleanText)}</h${depth}>`;
