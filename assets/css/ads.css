@@ -1,0 +1,60 @@
+/* ==========================================================================
+   ASTROPAPER - AD SLOTS INTEGRATION
+   Minimalist, layout-stable Google AdSense containers
+   ========================================================================== */
+
+.ad-slot-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  position: relative;
+  background: var(--color-card-muted);
+  border: 1px dashed var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.15s ease;
+}
+
+.ad-slot-container:hover {
+  border-color: var(--color-accent);
+}
+
+.ad-label {
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.ad-slot-header {
+  width: 100%;
+  max-width: 728px;
+  min-height: 90px;
+  margin: 1.5rem auto;
+}
+
+.ad-slot-inline {
+  width: 100%;
+  max-width: 728px;
+  min-height: 90px;
+  margin: 2rem auto;
+}
+
+.ad-slot-footer {
+  width: 100%;
+  max-width: 728px;
+  min-height: 90px;
+  margin: 2rem auto 1rem auto;
+}
+
+.ad-placeholder-text {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Guide</title>
+  <meta name="description" content="New Guide is an independent publication for science, emerging technologies, engineering, and deep research explorations. Authored by Vijayaramanan.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main.css?v=3">
+  <link rel="stylesheet" href="assets/css/ads.css?v=3">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23fb923c'/></svg>">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-title">New Guide</a>
+
+      <div class="nav-group">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="posts.html" class="nav-link">Posts</a></li>
+            <li><a href="posts.html#tags" class="nav-link">Tags</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+          </ul>
+        </nav>
+
+        <!-- Search Icon Button -->
+        <button class="icon-btn" id="searchToggleBtn" aria-label="Search posts" title="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- Light / Dark Theme Toggle Button -->
+        <button class="icon-btn" id="themeToggleBtn" aria-label="Toggle light & dark theme" title="Toggle Theme">
+          <svg id="themeIconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg id="themeIconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Realtime Search Filter Bar -->
+    <div class="search-container" id="searchContainer">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search for any post or topic...">
+    </div>
+
+    <!-- Hero / Intro Section -->
+    <section class="hero-section">
+      <div class="hero-title-row">
+        <h1 class="hero-title">New Guide</h1>
+        <a href="#posts" class="rss-icon" aria-label="RSS Feed" title="RSS Feed">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 11a9 9 0 0 1 9 9"></path>
+            <path d="M4 4a16 16 0 0 1 16 16"></path>
+            <circle cx="5" cy="19" r="1"></circle>
+          </svg>
+        </a>
+      </div>
+
+      <p class="hero-bio">
+        New Guide is a minimal, accessible publication platform dedicated to science, emerging technologies, engineering breakthroughs, and deep research explorations. Authored by <strong>Vijayaramanan</strong>.
+      </p>
+
+      <p class="hero-bio">
+        Read the research deep dives below or check the <a href="about.html" class="link-underline">ABOUT</a> page for more info.
+      </p>
+
+      <div class="hero-social-row">
+        <span>Social Links:</span>
+        <div class="social-icons-group">
+          <!-- X (Twitter) -->
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="X (Twitter)" title="Follow on X">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Header Ad Container (Google AdSense Ready) -->
+    <div class="ad-slot-container ad-slot-header" id="ad-slot-top">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-placeholder-text">
+        <!-- AUTHOR: GOOGLE ADSENSE SCRIPT INJECTION POINT (HEADER LEADERBOARD 728x90) -->
+        <span>Ad Container // Leaderboard Slot (728&times;90)</span>
+      </div>
+    </div>
+
+    <!-- Featured Section -->
+    <section class="section-posts" id="posts">
+      <h2 class="section-title">Featured</h2>
+      
+      <ul class="posts-list">
+        <!-- Post 1 -->
+        <li class="post-item">
+          <h3 class="post-title">
+            <a href="article.html?slug=antigravity-basics">Fundamentals of Gravitational Field Modification &amp; Metric Engineering</a>
+          </h3>
+          <div class="post-meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="18" y2="10"></line></svg>
+            <span>August 15, 2026 | 01:45 PM</span>
+          </div>
+          <p class="post-description">
+            A comprehensive investigation into theoretical paradigms, electromagnetic field coupling, and metric distortion equations governing non-Newtonian propulsion and gravitational shielding.
+          </p>
+          <div class="post-tags" id="tags">
+            <a href="#tags" class="tag-pill">#theoretical-physics</a>
+            <a href="#tags" class="tag-pill">#metric-engineering</a>
+            <a href="#tags" class="tag-pill">#casimir-dynamics</a>
+          </div>
+        </li>
+
+        <!-- Post 2 -->
+        <li class="post-item">
+          <h3 class="post-title">
+            <a href="article.html?slug=warp-metric-engineering">Metric Engineering &amp; Dynamic Spacetime Geometries: Beyond Alcubierre</a>
+          </h3>
+          <div class="post-meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="18" y2="10"></line></svg>
+            <span>August 10, 2026 | 09:52 PM</span>
+          </div>
+          <p class="post-description">
+            Analyzing physical energy condition modifications, Lentz positive-energy soliton solutions, and pulsed electromagnetic field generation for sub-light and superluminal metric bubbles.
+          </p>
+          <div class="post-tags">
+            <a href="#tags" class="tag-pill">#warp-drive</a>
+            <a href="#tags" class="tag-pill">#solitons</a>
+            <a href="#tags" class="tag-pill">#relativity</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Recent Posts Section -->
+    <section class="section-posts">
+      <h2 class="section-title">Recent Posts</h2>
+      
+      <ul class="posts-list" id="latestArticlesGrid">
+        <!-- Monthly Field Dispatch 1 -->
+        <li class="post-item">
+          <h3 class="post-title">
+            <a href="article.html?slug=antigravity-basics">High-Q Superconducting Resonator Cryogenic Calibration</a>
+          </h3>
+          <div class="post-meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="18" y2="10"></line></svg>
+            <span>August 02, 2026 | 11:15 AM</span>
+          </div>
+          <p class="post-description">
+            Testing unloaded quality factor in niobium-tin microwave cavities at 2.0 Kelvin for baseline Casimir displacement detection.
+          </p>
+          <div class="post-tags">
+            <a href="#tags" class="tag-pill">#lab-dispatch</a>
+            <a href="#tags" class="tag-pill">#superconductivity</a>
+          </div>
+        </li>
+
+        <!-- Monthly Field Dispatch 2 -->
+        <li class="post-item">
+          <h3 class="post-title">
+            <a href="article.html?slug=warp-metric-engineering">Numerical Convergence of Lentz Soliton Stress Tensors</a>
+          </h3>
+          <div class="post-meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="18" y2="10"></line></svg>
+            <span>July 24, 2026 | 04:30 PM</span>
+          </div>
+          <p class="post-description">
+            Numerical benchmarks indicating harmonic frequency mixing yields a 42% reduction in required excitation field power.
+          </p>
+          <div class="post-tags">
+            <a href="#tags" class="tag-pill">#numerical-physics</a>
+            <a href="#tags" class="tag-pill">#tensors</a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="all-posts-btn-wrapper">
+        <a href="posts.html" class="all-posts-link">
+          All Posts &rarr;
+        </a>
+      </div>
+    </section>
+
+    <!-- Bottom Footer Ad Container (Google AdSense Ready) -->
+    <div class="ad-slot-container ad-slot-footer" id="ad-slot-footer">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-placeholder-text">
+        <!-- AUTHOR: GOOGLE ADSENSE FOOTER BANNER (728x90) -->
+        <span>Ad Container // Bottom Banner Slot (728&times;90)</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        Copyright &copy; 2026 | Authored by <strong>Vijayaramanan</strong>
+      </div>
+      <div class="footer-social-links">
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="X (Twitter)" title="Follow on X">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js?v=3"></script>
+  <script src="assets/js/articles-index.js?v=3"></script>
+</body>
+</html>

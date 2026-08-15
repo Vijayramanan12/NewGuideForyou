@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post | New Guide</title>
+  <meta name="description" content="Scientific deep dive on field manipulation and metric engineering. Authored by Vijayaramanan.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main.css?v=4">
+  <link rel="stylesheet" href="assets/css/article.css?v=4">
+  <link rel="stylesheet" href="assets/css/ads.css?v=4">
+  
+  <!-- KaTeX Math & Science Typesetting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23fb923c'/></svg>">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-title">New Guide</a>
+
+      <div class="nav-group">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="posts.html" class="nav-link">Posts</a></li>
+            <li><a href="posts.html#tags" class="nav-link">Tags</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+          </ul>
+        </nav>
+
+        <!-- Search Icon Button -->
+        <a href="index.html" class="icon-btn" aria-label="Search posts" title="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </a>
+
+        <!-- Light / Dark Theme Toggle Button -->
+        <button class="icon-btn" id="themeToggleBtn" aria-label="Toggle light & dark theme" title="Toggle Theme">
+          <svg id="themeIconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg id="themeIconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Back to Posts Button (AstroPaper style) -->
+    <div class="back-btn-wrapper">
+      <a href="index.html" class="back-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>Go back</span>
+      </a>
+    </div>
+
+    <!-- Top Header Ad Container (Google AdSense Ready) -->
+    <div class="ad-slot-container ad-slot-header" id="ad-slot-article-top">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-placeholder-text">
+        <!-- AUTHOR: GOOGLE ADSENSE SCRIPT INJECTION POINT (HEADER LEADERBOARD 728x90) -->
+        <span>Ad Container // Leaderboard Slot (728&times;90)</span>
+      </div>
+    </div>
+
+    <!-- Post Article Wrapper -->
+    <article>
+      <!-- Post Header -->
+      <header class="post-header">
+        <h1 class="post-main-title" id="articleTitle">
+          Fundamentals of Gravitational Field Modification &amp; Metric Engineering
+        </h1>
+
+        <div class="post-meta-row">
+          <div class="post-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="18" y2="10"></line></svg>
+            <span id="articleDate">August 15, 2026</span>
+          </div>
+          <span>|</span>
+          <div class="post-meta-item">
+            <span id="articleReadTime">8 min read</span>
+          </div>
+          <span>|</span>
+          <div class="post-meta-item">
+            <span>Author: <strong class="post-author-tag" id="authorName">Vijayaramanan</strong></span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Table of Contents -->
+      <div class="toc-box">
+        <div class="toc-title">Table of Contents</div>
+        <ul class="toc-list" id="tocList">
+          <li><a href="#1-introduction-breaking-the-equivalence-constraint" class="toc-link">1. Introduction: Breaking the Equivalence Constraint</a></li>
+          <li><a href="#2-electrogravitic-coupling--the-biefeld-brown-anomaly" class="toc-link">2. Electrogravitic Coupling &amp; Dielectric Asymmetry</a></li>
+          <li><a href="#3-quantum-vacuum-dynamics--negative-energy-densities" class="toc-link">3. Quantum Vacuum Dynamics</a></li>
+          <li><a href="#4-superconducting-gravitational-shielding-the-podkletnov-anomaly" class="toc-link">4. Superconducting Shielding</a></li>
+          <li><a href="#5-ongoing-experiments--laboratory-roadmap" class="toc-link">5. Ongoing Experiments &amp; Roadmap</a></li>
+          <li><a href="#6-references--scientific-citations" class="toc-link">6. References</a></li>
+        </ul>
+      </div>
+
+      <!-- Main Prose Canvas -->
+      <div class="article-prose" id="articleContentCanvas">
+        <p><em>Loading content from Markdown...</em></p>
+      </div>
+
+      <!-- In-Article Ad Container -->
+      <div class="ad-slot-container ad-slot-inline" id="ad-slot-article-bottom">
+        <span class="ad-label">Advertisement</span>
+        <div class="ad-placeholder-text">
+          <!-- AUTHOR: GOOGLE ADSENSE IN-ARTICLE BANNER (728x90) -->
+          <span>Ad Container // In-Article Banner (728&times;90)</span>
+        </div>
+      </div>
+
+      <!-- Post Footer -->
+      <footer class="post-footer">
+        <div class="post-tags-row">
+          <span style="font-size: 0.85rem; color: var(--color-text-muted);">Tags:</span>
+          <a href="index.html#tags" class="tag-pill">#theoretical-physics</a>
+          <a href="index.html#tags" class="tag-pill">#metric-engineering</a>
+          <a href="index.html#tags" class="tag-pill">#casimir-dynamics</a>
+        </div>
+
+        <div class="share-post-row">
+          <div style="display: flex; gap: 0.75rem; align-items: center;">
+            <span style="color: var(--color-text-muted);">Share:</span>
+            <button class="link-underline" id="shareCopyBtn" style="background:none; border:none; color:inherit; font-family:inherit; cursor:pointer; font-size:inherit;">Copy Link</button>
+            <span>&bull;</span>
+            <a href="https://twitter.com/intent/tweet?text=Read%20this%20article%20on%20New%20Guide" target="_blank" rel="noopener noreferrer" class="link-underline" id="shareXBtn">Post on X</a>
+          </div>
+
+          <a href="posts.html" class="all-posts-link">
+            All Posts &rarr;
+          </a>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        Copyright &copy; 2026 | Authored by <strong>Vijayaramanan</strong>
+      </div>
+      <div class="footer-social-links">
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="X (Twitter)" title="Follow on X">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js?v=4"></script>
+  <script src="assets/js/article-engine.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Posts | New Guide</title>
+  <meta name="description" content="Explore all scientific research deep dives, technical guides, and engineering publications by Vijayaramanan on New Guide.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main.css?v=3">
+  <link rel="stylesheet" href="assets/css/ads.css?v=3">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23fb923c'/></svg>">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-title">New Guide</a>
+
+      <div class="nav-group">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="posts.html" class="nav-link active">Posts</a></li>
+            <li><a href="posts.html#tags" class="nav-link">Tags</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+          </ul>
+        </nav>
+
+        <!-- Search Icon Button -->
+        <button class="icon-btn" id="searchToggleBtn" aria-label="Search posts" title="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- Light / Dark Theme Toggle Button -->
+        <button class="icon-btn" id="themeToggleBtn" aria-label="Toggle light & dark theme" title="Toggle Theme">
+          <svg id="themeIconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg id="themeIconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Realtime Search Bar -->
+    <div class="search-container" id="searchContainer">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search for any post, technology or research topic...">
+    </div>
+
+    <!-- Page Header -->
+    <div class="posts-page-header">
+      <h1 class="posts-page-title">All Posts</h1>
+      <p class="posts-page-subtitle">
+        Explore all scientific research deep dives, technical guides, and engineering publications by <strong>Vijayaramanan</strong>.
+      </p>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs-row" id="filterTabs">
+        <button class="filter-tab-btn active" data-filter="all">All</button>
+        <button class="filter-tab-btn" data-filter="applied">Applied Engineering</button>
+        <button class="filter-tab-btn" data-filter="metric">Metric Engineering</button>
+        <button class="filter-tab-btn" data-filter="theoretical">Theoretical Physics</button>
+      </div>
+    </div>
+
+    <!-- Top Header Ad Container (Google AdSense Ready) -->
+    <div class="ad-slot-container ad-slot-header" id="ad-slot-posts-top">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-placeholder-text">
+        <!-- AUTHOR: GOOGLE ADSENSE SCRIPT INJECTION POINT (HEADER LEADERBOARD 728x90) -->
+        <span>Ad Container // Leaderboard Slot (728&times;90)</span>
+      </div>
+    </div>
+
+    <!-- The 3-Column Card Grid -->
+    <ul class="posts-grid" id="allPostsGrid">
+      
+      <!-- Post Card 1: Super Steel -->
+      <li class="card-post" data-category="applied">
+        <div class="card-top">
+          <span class="card-category">Applied Engineering &amp; Physics</span>
+          <div class="card-title-row">
+            <a href="article.html?slug=post-titanium-super-steel-green-hydrogen" class="card-title">
+              The Post-Titanium Era: How Super Steel Could Scale Green Hydrogen Production
+            </a>
+            <span class="card-arrow">&#8599;</span>
+          </div>
+          <p class="card-excerpt">
+            A new generation of corrosion-resistant “super steel” could replace selected titanium components in PEM electrolyzers, cutting material costs while surviving high-voltage, chloride-rich conditions.
+          </p>
+        </div>
+        <div class="card-author-footer">
+          <div class="card-avatar">V</div>
+          <div class="card-author-meta">
+            <span class="card-author-name">Vijayaramanan</span>
+            <span class="card-post-date">15 Aug 2026 &bull; 14 min read</span>
+          </div>
+        </div>
+      </li>
+
+      <!-- Post Card 2: Metric Engineering -->
+      <li class="card-post" data-category="metric">
+        <div class="card-top">
+          <span class="card-category">Metric Engineering</span>
+          <div class="card-title-row">
+            <a href="article.html?slug=warp-metric-engineering" class="card-title">
+              Metric Engineering &amp; Dynamic Spacetime Geometries: Beyond Alcubierre
+            </a>
+            <span class="card-arrow">&#8599;</span>
+          </div>
+          <p class="card-excerpt">
+            Analyzing physical energy condition modifications, Lentz positive-energy soliton solutions, and pulsed electromagnetic field generation for sub-light and superluminal metric bubbles.
+          </p>
+        </div>
+        <div class="card-author-footer">
+          <div class="card-avatar">V</div>
+          <div class="card-author-meta">
+            <span class="card-author-name">Vijayaramanan</span>
+            <span class="card-post-date">10 Aug 2026 &bull; 11 min read</span>
+          </div>
+        </div>
+      </li>
+
+      <!-- Post Card 3: Gravitational Field Modification -->
+      <li class="card-post" data-category="theoretical">
+        <div class="card-top">
+          <span class="card-category">Theoretical Physics</span>
+          <div class="card-title-row">
+            <a href="article.html?slug=antigravity-basics" class="card-title">
+              Fundamentals of Gravitational Field Modification &amp; Metric Engineering
+            </a>
+            <span class="card-arrow">&#8599;</span>
+          </div>
+          <p class="card-excerpt">
+            A comprehensive investigation into theoretical paradigms, electromagnetic field coupling, and metric distortion equations governing non-Newtonian propulsion and gravitational shielding.
+          </p>
+        </div>
+        <div class="card-author-footer">
+          <div class="card-avatar">V</div>
+          <div class="card-author-meta">
+            <span class="card-author-name">Vijayaramanan</span>
+            <span class="card-post-date">02 Aug 2026 &bull; 8 min read</span>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+    <!-- Bottom Footer Ad Slot -->
+    <div class="ad-slot-container ad-slot-footer" id="ad-slot-posts-bottom">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-placeholder-text">
+        <!-- AUTHOR: GOOGLE ADSENSE FOOTER BANNER (728x90) -->
+        <span>Ad Container // Bottom Banner Slot (728&times;90)</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        Copyright &copy; 2026 | Authored by <strong>Vijayaramanan</strong>
+      </div>
+      <div class="footer-social-links">
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="X (Twitter)" title="Follow on X">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js?v=3"></script>
+  <script src="assets/js/articles-index.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  
+  <!-- Subtle grid lines -->
+  <g stroke="rgba(255,255,255,0.06)" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="450"/>
+    <line x1="250" y1="0" x2="250" y2="450"/>
+    <line x1="400" y1="0" x2="400" y2="450"/>
+    <line x1="550" y1="0" x2="550" y2="450"/>
+    <line x1="700" y1="0" x2="700" y2="450"/>
+    <line x1="0" y1="90" x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+  </g>
+
+  <!-- Glowing Aura -->
+  <circle cx="400" cy="225" r="140" fill="url(#glow)"/>
+
+  <!-- Super Steel Lattice & Hydrogen Molecules -->
+  <g stroke="url(#metal)" stroke-width="3" fill="none">
+    <!-- Hexagonal lattice -->
+    <polygon points="400,140 470,180 470,260 400,300 330,260 330,180"/>
+    <polygon points="400,60 470,100 470,180 400,140 330,180 330,100"/>
+    <polygon points="540,140 610,180 610,260 540,300 470,260 470,180"/>
+    <polygon points="260,140 330,180 330,260 260,300 190,260 190,180"/>
+  </g>
+
+  <!-- Atoms / Nodes -->
+  <g fill="#38bdf8">
+    <circle cx="400" cy="140" r="8"/>
+    <circle cx="470" cy="180" r="8"/>
+    <circle cx="470" cy="260" r="8"/>
+    <circle cx="400" cy="300" r="8"/>
+    <circle cx="330" cy="260" r="8"/>
+    <circle cx="330" cy="180" r="8"/>
+  </g>
+  <g fill="#34d399">
+    <circle cx="400" cy="220" r="12"/>
+    <circle cx="260" cy="220" r="9"/>
+    <circle cx="540" cy="220" r="9"/>
+  </g>
+
+  <!-- Hydrogen H2 Symbol Floating -->
+  <text x="400" y="226" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle" dominant-baseline="middle">H₂</text>
+  
+  <text x="50" y="50" font-family="'IBM Plex Mono', monospace" font-size="14" fill="#38bdf8" letter-spacing="2">SS-H2 // PEM ELECTROLYZER</text>
+</svg>
