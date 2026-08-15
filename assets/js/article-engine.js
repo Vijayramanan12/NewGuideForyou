@@ -117,7 +117,23 @@ function renderScientificMarkdown(markdown) {
   const headings = [];
   let html = markdown;
 
-  // 1. Display Equations (\[ ... \] or $$ ... $$)
+  const equations = [];
+  const inlineMath = [];
+  const codeBlocks = [];
+
+  // 1. Stash Code Blocks (```language ... ```)
+  html = html.replace(/```([a-zA-Z0-9_-]*)\n([\s\S]*?)```/g, (match, lang, code) => {
+    const placeholder = `@@CODE_BLOCK_${codeBlocks.length}@@`;
+    codeBlocks.push(`
+      <div class="code-block-wrapper" style="position: relative;">
+        <pre><code class="language-${lang || 'text'}">${escapeHtml(code.trim())}</code></pre>
+        <button class="copy-code-btn" style="position: absolute; top: 8px; right: 8px; padding: 4px 8px; font-size: 0.75rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; color: #fff; cursor: pointer;">Copy</button>
+      </div>
+    `);
+    return placeholder;
+  });
+
+  // 2. Stash Display Equations (\[ ... \] or $$ ... $$)
   html = html.replace(/(\\\[[\s\S]*?\\\]|\$\$[\s\S]*?\$\$)/g, (match) => {
     let formula = match.trim();
     if (formula.startsWith('\\[') && formula.endsWith('\\]')) {
@@ -125,10 +141,12 @@ function renderScientificMarkdown(markdown) {
     } else if (formula.startsWith('$$') && formula.endsWith('$$')) {
       formula = formula.slice(2, -2).trim();
     }
-    return `\n\n<div class="equation-box"><div class="equation-content">${renderMathFormula(formula, true)}</div></div>\n\n`;
+    const placeholder = `@@EQUATION_DISPLAY_${equations.length}@@`;
+    equations.push(`\n\n<div class="equation-box"><div class="equation-content">${renderMathFormula(formula, true)}</div></div>\n\n`);
+    return placeholder;
   });
 
-  // Inline Math (\( ... \) or $ ... $)
+  // 3. Stash Inline Math (\( ... \) or $ ... $)
   html = html.replace(/(\\\([\s\S]*?\\\)|\$([^\$\n]+)\$)/g, (match, p1, p2) => {
     let formula = (p1 || p2 || match).trim();
     if (formula.startsWith('\\(') && formula.endsWith('\\)')) {
@@ -136,28 +154,12 @@ function renderScientificMarkdown(markdown) {
     } else if (formula.startsWith('$') && formula.endsWith('$')) {
       formula = formula.slice(1, -1).trim();
     }
-    return `<span class="math-inline">${renderMathFormula(formula, false)}</span>`;
+    const placeholder = `@@INLINE_MATH_${inlineMath.length}@@`;
+    inlineMath.push(`<span class="math-inline">${renderMathFormula(formula, false)}</span>`);
+    return placeholder;
   });
 
-  // 2. Scientific Callout Blocks (> [!NOTE], > [!HYPOTHESIS], > [!WARNING])
-  html = html.replace(/^>\s*\[!([A-Z]+)\]([^\n]*)\n((?:^>.*\n?)*)/gim, (match, type, title, body) => {
-    const cleanBody = body.replace(/^>\s?/gm, '').trim();
-    const typeLower = type.toLowerCase();
-    const customTitle = title.trim() || `${type} DIRECTIVE`;
-    return `
-      <div class="callout callout-${typeLower}">
-        <div class="callout-title">// ${escapeHtml(customTitle)}</div>
-        <p>${parseInlineMarkdown(cleanBody)}</p>
-      </div>
-    `;
-  });
-
-  // Standard Blockquotes (> text)
-  html = html.replace(/^>\s*(.+)$/gm, (match, quote) => {
-    return `<blockquote>${parseInlineMarkdown(quote)}</blockquote>`;
-  });
-
-  // 3. In-Place Table of Contents (formats ## Table of Contents block into a styled .toc-box right where it is written)
+  // 4. In-Place Table of Contents (formats ## Table of Contents block into a styled .toc-box right where it is written)
   html = html.replace(/^##\s+Table\s+of\s+Contents[\s\S]*?(?=\n##\s+[^#]|\n\n\n|$)/im, (match) => {
     const items = [];
     const lines = match.split('\n');
@@ -173,7 +175,25 @@ function renderScientificMarkdown(markdown) {
     return match;
   });
 
-  // 4. Headings with Slug IDs for TOC (# Heading, ## Heading, ### Heading, #### Heading)
+  // 5. Scientific Callout Blocks (> [!NOTE], > [!HYPOTHESIS], > [!WARNING])
+  html = html.replace(/^>\s*\[!([A-Z]+)\]([^\n]*)\n((?:^>.*\n?)*)/gim, (match, type, title, body) => {
+    const cleanBody = body.replace(/^>\s?/gm, '').trim();
+    const typeLower = type.toLowerCase();
+    const customTitle = title.trim() || `${type} DIRECTIVE`;
+    return `
+      <div class="callout callout-${typeLower}">
+        <div class="callout-title">// ${escapeHtml(customTitle)}</div>
+        <p>${parseInlineMarkdown(cleanBody)}</p>
+      </div>
+    `;
+  });
+
+  // 6. Standard Blockquotes (> text)
+  html = html.replace(/^>\s*(.+)$/gm, (match, quote) => {
+    return `<blockquote>${parseInlineMarkdown(quote)}</blockquote>`;
+  });
+
+  // 7. Headings with Slug IDs for TOC (# Heading, ## Heading, ### Heading, #### Heading)
   html = html.replace(/^(#{1,4})\s+(.+)$/gm, (match, level, text) => {
     const depth = level.length; // 1 for h1, 2 for h2, 3 for h3, 4 for h4
     const cleanText = text.trim();
@@ -188,28 +208,18 @@ function renderScientificMarkdown(markdown) {
     return `<h${depth} id="${slug}">${parseInlineMarkdown(cleanText)}</h${depth}>`;
   });
 
-  // 4. Code blocks (```language ... ```)
-  html = html.replace(/```([a-zA-Z0-9_-]*)\n([\s\S]*?)```/g, (match, lang, code) => {
-    return `
-      <div class="code-block-wrapper" style="position: relative;">
-        <pre><code class="language-${lang || 'text'}">${escapeHtml(code.trim())}</code></pre>
-        <button class="copy-code-btn" style="position: absolute; top: 8px; right: 8px; padding: 4px 8px; font-size: 0.75rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; color: #fff; cursor: pointer;">Copy</button>
-      </div>
-    `;
-  });
-
-  // 5. Tables (| Header | Header |)
+  // 8. Tables (| Header | Header |)
   html = parseMarkdownTables(html);
 
-  // 6. Unordered Lists
+  // 9. Unordered Lists
   html = html.replace(/^\s*[\-\*]\s+(.+)$/gm, '<li>$1</li>');
   html = html.replace(/(<li>.*<\/li>(\n<li>.*<\/li>)*)/g, '<ul>$1</ul>');
 
-  // 7. Ordered Lists
+  // 10. Ordered Lists
   html = html.replace(/^\s*\d+\.\s+(.+)$/gm, '<li class="ol-item">$1</li>');
   html = html.replace(/(<li class="ol-item">.*<\/li>(\n<li class="ol-item">.*<\/li>)*)/g, '<ol>$1</ol>');
 
-  // 8. Paragraphs
+  // 11. Paragraphs
   const blocks = html.split(/\n\n+/);
   const parsedBlocks = blocks.map(block => {
     block = block.trim();
@@ -221,14 +231,31 @@ function renderScientificMarkdown(markdown) {
       block.startsWith('<pre') ||
       block.startsWith('<ul>') ||
       block.startsWith('<ol>') ||
-      block.startsWith('<blockquote>')
+      block.startsWith('<blockquote>') ||
+      block.startsWith('@@EQUATION_DISPLAY_') ||
+      block.startsWith('@@CODE_BLOCK_')
     ) {
       return block;
     }
     return `<p>${parseInlineMarkdown(block)}</p>`;
   });
 
-  return { html: parsedBlocks.join('\n'), headings };
+  let compiledHtml = parsedBlocks.join('\n');
+
+  // Restore Stashed Placeholders
+  equations.forEach((eq, i) => {
+    compiledHtml = compiledHtml.replace(`@@EQUATION_DISPLAY_${i}@@`, eq);
+  });
+
+  inlineMath.forEach((im, i) => {
+    compiledHtml = compiledHtml.replace(`@@INLINE_MATH_${i}@@`, im);
+  });
+
+  codeBlocks.forEach((cb, i) => {
+    compiledHtml = compiledHtml.replace(`@@CODE_BLOCK_${i}@@`, cb);
+  });
+
+  return { html: compiledHtml, headings };
 }
 
 /* Parse Markdown Tables (Deterministic Multi-row Parser) */
