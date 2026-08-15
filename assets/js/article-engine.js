@@ -46,11 +46,8 @@ async function initArticleEngine() {
       initCodeCopyButtons();
     }
 
-    // Build Table of Contents
-    if (tocContainer && headings.length > 0) {
-      buildTableOfContents(tocContainer, headings);
-      initScrollSpy();
-    }
+    // Initialize ScrollSpy for TOC links
+    initScrollSpy();
 
     // Initialize Reading Progress Bar
     initReadingProgress();
@@ -160,7 +157,23 @@ function renderScientificMarkdown(markdown) {
     return `<blockquote>${parseInlineMarkdown(quote)}</blockquote>`;
   });
 
-  // 3. Headings with Slug IDs for TOC (# Heading, ## Heading, ### Heading, #### Heading)
+  // 3. In-Place Table of Contents (formats ## Table of Contents block into a styled .toc-box right where it is written)
+  html = html.replace(/^##\s+Table\s+of\s+Contents[\s\S]*?(?=\n##\s+[^#]|\n\n\n|$)/im, (match) => {
+    const items = [];
+    const lines = match.split('\n');
+    lines.forEach(line => {
+      const linkMatch = line.match(/^[\-\*]\s+\[(.*?)\]\((.*?)\)/);
+      if (linkMatch) {
+        items.push(`<li><a href="${linkMatch[2]}" class="toc-link">${linkMatch[1]}</a></li>`);
+      }
+    });
+    if (items.length > 0) {
+      return `\n\n<div class="toc-box"><div class="toc-title">Table of Contents</div><ul class="toc-list" id="tocList">\n${items.join('\n')}\n</ul></div>\n\n`;
+    }
+    return match;
+  });
+
+  // 4. Headings with Slug IDs for TOC (# Heading, ## Heading, ### Heading, #### Heading)
   html = html.replace(/^(#{1,4})\s+(.+)$/gm, (match, level, text) => {
     const depth = level.length; // 1 for h1, 2 for h2, 3 for h3, 4 for h4
     const cleanText = text.trim();
@@ -169,7 +182,7 @@ function renderScientificMarkdown(markdown) {
       .replace(/[^\w\s-]/g, '')
       .replace(/\s+/g, '-');
 
-    if (depth >= 2 && depth <= 3) {
+    if (depth >= 2 && depth <= 3 && !/^table\s+of\s+contents$/i.test(cleanText)) {
       headings.push({ depth, text: cleanText, id: slug });
     }
     return `<h${depth} id="${slug}">${parseInlineMarkdown(cleanText)}</h${depth}>`;
