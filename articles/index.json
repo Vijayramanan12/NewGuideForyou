@@ -1,6 +1,23 @@
 {
   "articles": [
     {
+      "slug": "autonomous-ai-agents-system-architecture",
+      "title": "Autonomous AI Agents: The System Architecture Beyond the LLM",
+      "author": "Vijayaramanan",
+      "date": "15 Aug 2026",
+      "category": "Emerging Technologies",
+      "tags": [
+        "AI agents",
+        "LLM systems",
+        "agent architecture",
+        "tool use",
+        "AI safety"
+      ],
+      "readTime": "15 min read",
+      "coverImage": "assets/images/quantum-gravity.svg",
+      "excerpt": "An autonomous AI agent is not a larger prompt wrapped around an LLM. It is a closed-loop system combining state, planning, memory, tools, permissions, evaluation, and human oversight. This guide explains how those layers fit together—and where production systems fail."
+    },
+    {
       "slug": "post-titanium-super-steel-green-hydrogen",
       "title": "The Post-Titanium Era: How Super Steel Could Scale Green Hydrogen Production",
       "author": "Vijayaramanan",
