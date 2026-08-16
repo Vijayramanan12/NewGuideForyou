@@ -22,9 +22,12 @@ async function initArticleEngine() {
   const authorNameEl = document.getElementById('authorName');
 
   try {
-    const response = await fetch(`articles/${slug}.md`);
+    let response = await fetch(`articles/${slug}.md`);
     if (!response.ok) {
-      throw new Error(`Article file "articles/${slug}.md" not found.`);
+      response = await fetch(`tutorials/${slug}.md`);
+    }
+    if (!response.ok) {
+      throw new Error(`File "${slug}.md" not found in articles/ or tutorials/.`);
     }
 
     const rawMarkdown = await response.text();
