@@ -86,7 +86,7 @@ async function initPostsGrid() {
             </p>
           </div>
           <div class="card-author-footer">
-            <div class="card-avatar">${(article.author || 'V')[0]}</div>
+            <div class="card-avatar">M</div>
             <div class="card-author-meta">
               <span class="card-author-name">${article.author || 'Vijayaramanan'}</span>
               <span class="card-post-date">${article.date} &bull; ${article.readTime || '10 min read'}</span>
