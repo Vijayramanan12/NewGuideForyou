@@ -408,10 +408,11 @@ function initCodeCopyButtons() {
 function initShareButtons() {
   const copyBtn = document.getElementById('shareCopyBtn');
   if (copyBtn) {
-    copyBtn.addEventListener('click', () => {
+    copyBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       navigator.clipboard.writeText(window.location.href).then(() => {
         copyBtn.textContent = '✓ Link Copied';
-        setTimeout(() => { copyBtn.textContent = '🔗 Copy Link'; }, 2500);
+        setTimeout(() => { copyBtn.textContent = 'Copy Link'; }, 2500);
       });
     });
   }
@@ -419,8 +420,17 @@ function initShareButtons() {
   const shareXBtn = document.getElementById('shareXBtn');
   if (shareXBtn) {
     const currentUrl = window.location.href;
-    const tweetText = `Read this article on New Guide  ${currentUrl}`;
-    shareXBtn.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
+    const tweetText = 'Read this article on New Guide';
+    const shareUrl = `https://x.com/intent/post?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(currentUrl)}`;
+    
+    shareXBtn.href = shareUrl;
+    shareXBtn.onclick = function(e) {
+      e.preventDefault();
+      const liveUrl = window.location.href;
+      const liveShareUrl = `https://x.com/intent/post?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(liveUrl)}`;
+      window.open(liveShareUrl, '_blank', 'width=600,height=520,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');
+      return false;
+    };
   }
 }
 
