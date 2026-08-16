@@ -23,7 +23,7 @@
   
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="assets/css/main.css?v=5">
-  <link rel="stylesheet" href="assets/css/article.css?v=5">
+  <link rel="stylesheet" href="assets/css/article.css?v=6">
   
   <!-- KaTeX Math & Science Typesetting -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
@@ -76,8 +76,9 @@
     </div>
   </header>
 
-  <main class="container">
-    <!-- Back to Posts Button (AstroPaper style) -->
+  <!-- Main Article Container (1200px width on desktop) -->
+  <main class="container article-layout-container">
+    <!-- Back to Posts Button -->
     <div class="back-btn-wrapper">
       <a href="/" class="back-btn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
@@ -85,14 +86,12 @@
       </a>
     </div>
 
-
-
     <!-- Post Article Wrapper -->
     <article>
       <!-- Post Header -->
       <header class="post-header">
         <h1 class="post-main-title" id="articleTitle">
-          Fundamentals of Gravitational Field Modification &amp; Metric Engineering
+          Loading Article...
         </h1>
 
         <div class="post-meta-row">
@@ -102,7 +101,7 @@
           </div>
           <span>|</span>
           <div class="post-meta-item">
-            <span id="articleReadTime">8 min read</span>
+            <span id="articleReadTime">10 min read</span>
           </div>
           <span>|</span>
           <div class="post-meta-item">
@@ -111,35 +110,50 @@
         </div>
       </header>
 
-      <!-- Main Prose Canvas -->
-      <div class="article-prose" id="articleContentCanvas">
-        <p><em>Loading content from Markdown...</em></p>
-      </div>
+      <!-- 2-Column Split: Left Sticky TOC (1/4) + Right Content (3/4) -->
+      <div class="article-body-grid">
+        <!-- Left Column: Sticky Table of Contents (1/4) -->
+        <aside class="article-toc-sidebar" id="articleTocSidebar">
+          <div class="sticky-toc-wrapper">
+            <div class="toc-sidebar-header">
+              <span class="toc-sidebar-title">Table of Contents</span>
+            </div>
+            <nav class="toc-sidebar-nav">
+              <ul class="toc-list" id="tocList">
+                <!-- Dynamically populated from markdown headings -->
+              </ul>
+            </nav>
+          </div>
+        </aside>
 
-
-
-      <!-- Post Footer -->
-      <footer class="post-footer">
-        <div class="post-tags-row">
-          <span style="font-size: 0.85rem; color: var(--color-text-muted);">Tags:</span>
-          <a href="index.html#tags" class="tag-pill">#theoretical-physics</a>
-          <a href="index.html#tags" class="tag-pill">#metric-engineering</a>
-          <a href="index.html#tags" class="tag-pill">#casimir-dynamics</a>
-        </div>
-
-        <div class="share-post-row">
-          <div style="display: flex; gap: 0.75rem; align-items: center;">
-            <span style="color: var(--color-text-muted);">Share:</span>
-            <button class="link-underline" id="shareCopyBtn" style="background:none; border:none; color:inherit; font-family:inherit; cursor:pointer; font-size:inherit;">Copy Link</button>
-            <span>&bull;</span>
-            <a href="https://x.com/intent/post?text=Read%20this%20article%20on%20New%20Guide" target="_blank" rel="noopener noreferrer" class="link-underline" id="shareXBtn">Post on X</a>
+        <!-- Right Column: Main Content Canvas (3/4) -->
+        <div class="article-content-col">
+          <div class="article-prose" id="articleContentCanvas">
+            <p><em>Loading content from Markdown...</em></p>
           </div>
 
-          <a href="posts" class="all-posts-link">
-            All Posts &rarr;
-          </a>
+          <!-- Post Footer -->
+          <footer class="post-footer">
+            <div class="post-tags-row">
+              <span style="font-size: 0.85rem; color: var(--color-text-muted);">Tags:</span>
+              <a href="posts#tags" class="tag-pill">#theoretical-physics</a>
+            </div>
+
+            <div class="share-post-row">
+              <div style="display: flex; gap: 0.75rem; align-items: center;">
+                <span style="color: var(--color-text-muted);">Share:</span>
+                <button class="link-underline" id="shareCopyBtn" style="background:none; border:none; color:inherit; font-family:inherit; cursor:pointer; font-size:inherit;">Copy Link</button>
+                <span>&bull;</span>
+                <a href="https://x.com/intent/post?text=Read%20this%20article%20on%20New%20Guide" target="_blank" rel="noopener noreferrer" class="link-underline" id="shareXBtn">Post on X</a>
+              </div>
+
+              <a href="posts" class="all-posts-link">
+                All Posts &rarr;
+              </a>
+            </div>
+          </footer>
         </div>
-      </footer>
+      </div>
     </article>
   </main>
 
@@ -161,6 +175,6 @@
 
   <!-- Scripts -->
   <script src="assets/js/main.js?v=4"></script>
-  <script src="assets/js/article-engine.js?v=8"></script>
+  <script src="assets/js/article-engine.js?v=9"></script>
 </body>
 </html>

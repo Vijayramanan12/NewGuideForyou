@@ -46,8 +46,14 @@ async function initArticleEngine() {
       initCodeCopyButtons();
     }
 
-    // Initialize ScrollSpy for TOC links
-    initScrollSpy();
+    // Build Sticky Table of Contents in Left Sidebar (1/4)
+    const tocSidebar = document.getElementById('articleTocSidebar');
+    if (tocContainer && headings.length > 0) {
+      buildTableOfContents(tocContainer, headings);
+      initScrollSpy();
+    } else if (tocSidebar) {
+      tocSidebar.style.display = 'none';
+    }
 
     // Initialize Reading Progress Bar
     initReadingProgress();
@@ -159,21 +165,9 @@ function renderScientificMarkdown(markdown) {
     return placeholder;
   });
 
-  // 4. In-Place Table of Contents (formats ## Table of Contents block into a styled .toc-box right where it is written)
-  html = html.replace(/^##\s+Table\s+of\s+Contents[\s\S]*?(?=\n##\s+[^#]|\n\n\n|$)/im, (match) => {
-    const items = [];
-    const lines = match.split('\n');
-    lines.forEach(line => {
-      const linkMatch = line.match(/^[\-\*]\s+\[(.*?)\]\((.*?)\)/);
-      if (linkMatch) {
-        items.push(`<li><a href="${linkMatch[2]}" class="toc-link">${linkMatch[1]}</a></li>`);
-      }
-    });
-    if (items.length > 0) {
-      return `\n\n<div class="toc-box"><div class="toc-title">Table of Contents</div><ul class="toc-list" id="tocList">\n${items.join('\n')}\n</ul></div>\n\n`;
-    }
-    return match;
-  });
+  // 4. Strip redundant in-body Table of Contents (since it is rendered in the dedicated left 1/4 sticky sidebar)
+  html = html.replace(/^##\s+Table\s+of\s+Contents[\s\S]*?(?=\n##\s+[^#]|\n\n\n|$)/im, '');
+  html = html.replace(/^##\s+Contents[\s\S]*?(?=\n##\s+[^#]|\n\n\n|$)/im, '');
 
   // 5. Scientific Callout Blocks (> [!NOTE], > [!HYPOTHESIS], > [!WARNING])
   html = html.replace(/^>\s*\[!([A-Z]+)\]([^\n]*)\n((?:^>.*\n?)*)/gim, (match, type, title, body) => {
