@@ -20,8 +20,10 @@
       "title": "Neuromorphic Computing Explained: How Brain-Inspired Hardware Computes with Spikes",
       "author": "Vijayaramanan",
       "date": "15 Aug 2026",
-      "category": "Emerging Technologies",
+      "category": "Tutorial & Technical Guide",
+      "isTutorial": true,
       "tags": [
+        "tutorial",
         "neuromorphic computing",
         "spiking neural networks",
         "AI hardware",
@@ -36,8 +38,10 @@
       "title": "Autonomous AI Agents: The System Architecture Beyond the LLM",
       "author": "Vijayaramanan",
       "date": "15 Aug 2026",
-      "category": "Emerging Technologies",
+      "category": "Tutorial & Technical Guide",
+      "isTutorial": true,
       "tags": [
+        "tutorial",
         "AI agents",
         "LLM systems",
         "agent architecture",

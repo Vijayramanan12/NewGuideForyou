@@ -61,8 +61,15 @@ async function initPostsGrid() {
     grid.innerHTML = articles.map(article => {
       let categoryType = 'applied';
       const catLower = (article.category || '').toLowerCase();
-      if (catLower.includes('metric')) categoryType = 'metric';
-      else if (catLower.includes('theoretical')) categoryType = 'theoretical';
+      const tags = (article.tags || []).map(t => t.toLowerCase());
+
+      if (article.isTutorial || catLower.includes('tutorial') || catLower.includes('guide') || tags.includes('tutorial')) {
+        categoryType = 'tutorials';
+      } else if (catLower.includes('metric')) {
+        categoryType = 'metric';
+      } else if (catLower.includes('theoretical')) {
+        categoryType = 'theoretical';
+      }
 
       return `
         <li class="card-post" data-category="${categoryType}">
@@ -88,6 +95,16 @@ async function initPostsGrid() {
         </li>
       `;
     }).join('');
+
+    // Trigger URL parameter filter if present (e.g. ?filter=tutorials)
+    const urlParams = new URLSearchParams(window.location.search);
+    const filterParam = urlParams.get('filter');
+    if (filterParam) {
+      const targetBtn = document.querySelector(`.filter-tab-btn[data-filter="${filterParam}"]`);
+      if (targetBtn) {
+        targetBtn.click();
+      }
+    }
 
   } catch (err) {
     console.warn('Dynamic posts grid loading error:', err);
