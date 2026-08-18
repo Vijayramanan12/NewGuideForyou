@@ -45,9 +45,9 @@ async function initArticlesIndex() {
       `).join('');
     }
 
-    // Render Recent Research Posts Section (Max 4 items)
-    if (container && researchPosts.length > 0) {
-      container.innerHTML = researchPosts.slice(0, 4).map(article => `
+    // Render Recent Posts Section (Top 4 most recent publications by date)
+    if (container && articles.length > 0) {
+      container.innerHTML = articles.slice(0, 4).map(article => `
         <li class="post-item">
           <h3 class="post-title">
             <a href="article?slug=${article.slug}">${article.title}</a>
@@ -58,7 +58,7 @@ async function initArticlesIndex() {
           </div>
           <p class="post-description">${article.excerpt || article.description}</p>
           <div class="post-tags">
-            ${(article.tags || [article.category || 'research']).map(tag => `<a href="posts#tags" class="tag-pill">#${tag.toLowerCase().replace(/\s+/g, '-')}</a>`).join(' ')}
+            ${(article.tags || [article.category || 'research']).map(tag => `<a href="${article.isTutorial ? 'posts?filter=tutorials' : 'posts#tags'}" class="tag-pill">#${tag.toLowerCase().replace(/\s+/g, '-')}</a>`).join(' ')}
           </div>
         </li>
       `).join('');
