@@ -15,7 +15,7 @@ async function initArticlesIndex() {
   const tutorialsContainer = document.getElementById('tutorialsList');
 
   try {
-    const response = await fetch('articles/index.json');
+    const response = await fetch('articles/index.json?v=' + Date.now());
     if (!response.ok) return;
 
     const data = await response.json();
