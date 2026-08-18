@@ -1,6 +1,23 @@
 {
   "articles": [
     {
+      "slug": "how-to-create-a-github-repository-and-add-code",
+      "title": "How to Create a GitHub Repository and Add Code",
+      "author": "Vijayaramanan",
+      "date": "18 Aug 2026",
+      "category": "Tutorial & Technical Guide",
+      "isTutorial": true,
+      "tags": [
+        "tutorial",
+        "GitHub",
+        "Git",
+        "version control",
+        "repositories"
+      ],
+      "readTime": "12 min read",
+      "excerpt": "Learn how to create a GitHub repository, connect it to a local project, commit your files, and push code safely from the command line."
+    },
+    {
       "slug": "passive-radiative-cooling-physics-without-power",
       "title": "Passive Radiative Cooling: The Physics of Cooling Without Power",
       "author": "Vijayaramanan",
