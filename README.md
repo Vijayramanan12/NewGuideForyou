@@ -1,20 +1,20 @@
 # New Guide - Web Architecture
 
-A modern, high-performance static website and publishing portal dedicated to **Metric Engineering and Advanced Propulsion**, written by lead researcher **Vijayaramanan**.
+A modern, high-performance static website and publishing portal dedicated to **Emerging Tech, Artificial Intelligence, and Applied Science**, created and founded by **Vijayaramanan** and open to community authors worldwide.
 
 ---
 
 ## 🚀 Key Features
 
-- **Dark Aerospace Aesthetics:** Deep cosmic color palette (`#050811`), neon graviton blue (`#00e5ff`), electric violet (`#8b5cf6`), glassmorphic panels, and subtle grid overlays.
-- **Interactive Graviton Canvas:** Live spacetime particle & gravity distortion simulation rendered on HTML5 Canvas in the hero section.
+- **Dark & Light AstroPaper Theme:** Minimal, accessible, responsive design with clean typography and high-contrast dark/light mode toggle.
+- **Publish With Us Platform:** Direct submission workflow and guidelines for community authors to publish articles and hands-on tutorials.
 - **The Long-Form Reader Canvas:** Dedicated reading layout with:
   - Sticky interactive Table of Contents with active section tracking (ScrollSpy).
   - Dynamic Markdown parser supporting YAML frontmatter.
   - Math formula rendering (`$$ ... $$` and `$ ... $`).
   - Scientific callouts (`> [!NOTE]`, `> [!HYPOTHESIS]`, `> [!WARNING]`).
   - Code syntax highlighting with one-click copy buttons.
-  - Lead author byline (**Vijayaramanan**).
+  - Custom author attribution, bio, and byline.
   - Top scroll reading progress indicator.
 - **Google AdSense Ready:** Pre-styled, layout-stable ad containers (`.ad-slot-header`, `.ad-slot-sidebar`, `.ad-slot-inline`, `.ad-slot-footer`) preventing Cumulative Layout Shift (CLS).
 - **Zero-Build Static Hosting:** Works natively on GitHub Pages, Cloudflare Pages, Vercel, Netlify, or any static HTTP web server without heavy build steps.
@@ -25,10 +25,11 @@ A modern, high-performance static website and publishing portal dedicated to **M
 
 ```
 /
-├── index.html                    # Homepage (Hero with canvas, Research Pillars, Latest Deep Dives, Dispatches)
+├── index.html                    # Homepage (Hero, Featured, Tutorials, Recent Posts, Publish With Us)
+├── posts.html                    # All posts archive with category filter tabs and real-time search
 ├── article.html                  # Article reader (The Reader Canvas, TOC sidebar, Markdown engine, Ads)
-├── about.html                    # About page (Mission, Vijayaramanan author bio, Roadmap)
-├── WRITING_GUIDE.md              # Authoring guide for Vijayaramanan
+├── about.html                    # About page (Mission, Founder Vijayaramanan bio, Public Publishing)
+├── WRITING_GUIDE.md              # Authoring & Publishing guide for contributors and authors
 ├── articles/
 │   ├── index.json                # Article metadata registry for dynamic discovery
 │   ├── antigravity-basics.md     # Primary template article with frontmatter & math equations

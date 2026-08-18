@@ -1,17 +1,19 @@
-# New Guide Content Authoring Guide
+# New Guide Content Authoring & Publishing Guide
 
-Welcome to the **New Guide** research and publishing portal content engine. This guide defines the exact formatting rules, frontmatter schema, mathematical notation, and code injection points for lead author **Vijayaramanan**.
+Welcome to the **New Guide** publishing and authoring guide. New Guide was created and founded by **Vijayaramanan** as an open, accessible publication platform for science, emerging technologies, system engineering, artificial intelligence, and applied physics.
+
+We welcome submissions and contributions from researchers, software engineers, physicists, and technical writers worldwide.
 
 ---
 
-## 1. How to Add a New Article / Deep Dive
+## 1. How to Submit an Article or Tutorial
 
-To publish a new scientific deep dive:
+To publish a new article or technical guide:
 
-1. Create a new Markdown file in the `articles/` directory (e.g., `articles/quantum-vacuum-thrusters.md`).
-2. Include the required YAML frontmatter at the top of the file.
-3. Write the article body using standard Markdown with our custom scientific extensions (equations, callouts, code blocks).
-4. Add the article's metadata into `articles/index.json` so it appears on the homepage.
+1. **Prepare your Markdown file:** Create a new Markdown file (e.g. `articles/your-topic-slug.md` or `tutorials/your-topic-slug.md`).
+2. **Include YAML frontmatter:** Set your custom author name, title, category, tags, and summary.
+3. **Submit for review:** Submit via Pull Request or email your Markdown draft to `editor@newguide.org` with the subject `Article Submission - [Your Title]`.
+4. **Publishing & Attribution:** Once reviewed for technical depth and clarity, your article is published with full author byline, links, and attribution.
 
 ---
 
@@ -21,14 +23,14 @@ Every `.md` file must begin with:
 
 ```yaml
 ---
-title: "Exact Title of the Research Deep Dive"
-slug: "quantum-vacuum-thrusters"
-author: "Vijayaramanan"
-date: "2026-08-15"
-category: "Quantum Vacuum Dynamics"
-tags: ["Casimir Effect", "QED", "Propulsion", "Superconductivity"]
-readTime: "9 min read"
-excerpt: "A 1-2 sentence executive summary of the research paper for preview cards and search engines."
+title: "Exact Title of the Research Deep Dive or Tutorial"
+slug: "your-article-slug"
+author: "Your Name"  # Your full author name or Vijayaramanan
+date: "2026-08-18"
+category: "AI & Systems Architecture"  # e.g., Quantum Physics, Systems Architecture, AI
+tags: ["Machine Learning", "System Design", "Distributed Systems"]
+readTime: "10 min read"
+excerpt: "A 1-2 sentence executive summary of the research paper or tutorial for cards and search previews."
 ---
 ```
 
