@@ -45,9 +45,9 @@ async function initArticlesIndex() {
       `).join('');
     }
 
-    // Render Recent Research Posts Section
+    // Render Recent Research Posts Section (Max 4 items)
     if (container && researchPosts.length > 0) {
-      container.innerHTML = researchPosts.map(article => `
+      container.innerHTML = researchPosts.slice(0, 4).map(article => `
         <li class="post-item">
           <h3 class="post-title">
             <a href="article?slug=${article.slug}">${article.title}</a>
