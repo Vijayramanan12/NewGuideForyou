@@ -539,57 +539,68 @@ main {
 
 /* Contribute & Publish Section */
 .section-contribute {
-  padding: 3rem 0 1rem 0;
+  padding: 3.5rem 0 1.5rem 0;
 }
 
 .contribute-box {
-  background: var(--color-card-muted);
+  background: var(--color-card);
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 2.25rem 2rem;
   margin-top: 1.25rem;
   position: relative;
   overflow: hidden;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  font-family: var(--font-sans);
 }
 
 .contribute-box:hover {
   border-color: var(--color-border-accent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .contribute-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 .contribute-tagline {
   font-family: var(--font-sans);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--color-text-base);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
 }
 
 .contribute-desc {
+  font-family: var(--font-sans);
   font-size: 0.95rem;
   color: var(--color-text-muted);
-  line-height: 1.7;
+  line-height: 1.65;
+  max-width: 820px;
 }
 
 .contribute-features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.25rem;
   margin: 1.75rem 0;
 }
 
 .contribute-feature-item {
-  background: var(--color-card);
+  background: var(--color-card-muted);
   border: 1px solid var(--color-border);
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.contribute-feature-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-border-accent);
 }
 
 .contribute-feature-title {
@@ -603,7 +614,8 @@ main {
 }
 
 .contribute-feature-text {
-  font-size: 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
   color: var(--color-text-muted);
   line-height: 1.6;
 }
