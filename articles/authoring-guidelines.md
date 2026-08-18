@@ -27,7 +27,7 @@ Publishing on New Guide is straightforward — you do not need complex Git confi
 
 1. **Write your draft:** Prepare your article or tutorial in your preferred format (**Google Docs, Microsoft Word `.docx`, Markdown `.md`, or PDF**).
 2. **Follow the content format:** Include the basic details listed in the Content Format section below (Title, Author Name, Bio, Category, and Summary).
-3. **Send it to us:** Click the **"Submit an Article / Tutorial"** button on our homepage or email your draft directly to **`mvijayramanan1210@gmail.com`**.
+3. **Send it to us:** Click the **"Submit an Article / Tutorial"** button on our homepage.
 
 Our editorial team handles all the website formatting, math typesetting, and responsive design, and publishes it with full credit to you!
 
