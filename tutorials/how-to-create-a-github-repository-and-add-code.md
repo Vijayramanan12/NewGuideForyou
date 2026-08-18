@@ -363,7 +363,8 @@ For the next stage, add a project README, create a feature branch, and use a pul
 
 ## References
 
-[1]: https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github "GitHub Docs: Adding locally hosted code to GitHub"
-[2]: https://cli.github.com/manual/gh_repo_create "GitHub CLI Manual: gh repo create"
-[3]: https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository "GitHub Docs: Adding a file to a repository"
-[4]: https://docs.github.com/en/get-started/start-your-journey/creating-a-repository-for-your-project-on-github "GitHub Docs: Creating a repository for your project on GitHub"
+1. [GitHub Docs: Adding locally hosted code to GitHub](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
+2. [GitHub CLI Manual: gh repo create](https://cli.github.com/manual/gh_repo_create)
+3. [GitHub Docs: Adding a file to a repository](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository)
+4. [GitHub Docs: Creating a repository for your project on GitHub](https://docs.github.com/en/get-started/start-your-journey/creating-a-repository-for-your-project-on-github)
+

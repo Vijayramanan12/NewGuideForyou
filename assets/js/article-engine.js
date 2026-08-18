@@ -208,12 +208,18 @@ function renderScientificMarkdown(markdown) {
   // 8. Tables (| Header | Header |)
   html = parseMarkdownTables(html);
 
+  // 8.5 Parse markdown reference definitions e.g. [1]: https://... "Title"
+  html = html.replace(/^\[(\d+)\]:\s*(https?:\/\/[^\s"]+)(?:\s+"([^"]+)")?$/gm, (match, num, url, title) => {
+    const label = title || url;
+    return `<li class="ol-item"><a href="${url}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a></li>`;
+  });
+
   // 9. Unordered Lists
-  html = html.replace(/^\s*[\-\*]\s+(.+)$/gm, '<li>$1</li>');
+  html = html.replace(/^\s*[\-\*]\s+(.+)$/gm, (match, text) => `<li>${parseInlineMarkdown(text)}</li>`);
   html = html.replace(/(<li>.*<\/li>(\n<li>.*<\/li>)*)/g, '<ul>$1</ul>');
 
   // 10. Ordered Lists
-  html = html.replace(/^\s*\d+\.\s+(.+)$/gm, '<li class="ol-item">$1</li>');
+  html = html.replace(/^\s*\d+\.\s+(.+)$/gm, (match, text) => `<li class="ol-item">${parseInlineMarkdown(text)}</li>`);
   html = html.replace(/(<li class="ol-item">.*<\/li>(\n<li class="ol-item">.*<\/li>)*)/g, '<ol>$1</ol>');
 
   // 11. Paragraphs

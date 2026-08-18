@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /* Home Page Linear Post List */
 async function initArticlesIndex() {
   const container = document.getElementById('latestArticlesGrid');
-  if (!container) return;
+  const tutorialsContainer = document.getElementById('tutorialsList');
 
   try {
     const response = await fetch('articles/index.json');
@@ -20,24 +20,49 @@ async function initArticlesIndex() {
 
     const data = await response.json();
     const articles = data.articles || [];
-
     if (articles.length === 0) return;
 
-    container.innerHTML = articles.map(article => `
-      <li class="post-item">
-        <h3 class="post-title">
-          <a href="article?slug=${article.slug}">${article.title}</a>
-        </h3>
-        <div class="post-meta">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="18" y2="10"></line></svg>
-          <span>${article.date} | ${article.readTime || '6 min read'}</span>
-        </div>
-        <p class="post-description">${article.excerpt || article.description}</p>
-        <div class="post-tags">
-          ${(article.tags || [article.category || 'research']).map(tag => `<a href="posts#tags" class="tag-pill">#${tag.toLowerCase().replace(/\s+/g, '-')}</a>`).join(' ')}
-        </div>
-      </li>
-    `).join('');
+    // Filter tutorials vs research posts
+    const tutorials = articles.filter(a => a.isTutorial || (a.category && a.category.toLowerCase().includes('tutorial')) || (a.tags && a.tags.some(t => t.toLowerCase() === 'tutorial')));
+    const researchPosts = articles.filter(a => !(a.isTutorial || (a.category && a.category.toLowerCase().includes('tutorial')) || (a.tags && a.tags.some(t => t.toLowerCase() === 'tutorial'))));
+
+    // Render Tutorials Section (only tutorials from tutorials folder)
+    if (tutorialsContainer && tutorials.length > 0) {
+      tutorialsContainer.innerHTML = tutorials.map(article => `
+        <li class="post-item">
+          <h3 class="post-title">
+            <a href="article?slug=${article.slug}">${article.title}</a>
+          </h3>
+          <div class="post-meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="18" y2="10"></line></svg>
+            <span>${article.date} | ${article.readTime || '10 min read'}</span>
+          </div>
+          <p class="post-description">${article.excerpt || article.description}</p>
+          <div class="post-tags">
+            ${(article.tags || ['tutorial']).map(tag => `<a href="posts?filter=tutorials" class="tag-pill">#${tag.toLowerCase().replace(/\s+/g, '-')}</a>`).join(' ')}
+          </div>
+        </li>
+      `).join('');
+    }
+
+    // Render Recent Research Posts Section
+    if (container && researchPosts.length > 0) {
+      container.innerHTML = researchPosts.map(article => `
+        <li class="post-item">
+          <h3 class="post-title">
+            <a href="article?slug=${article.slug}">${article.title}</a>
+          </h3>
+          <div class="post-meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="18" y2="10"></line></svg>
+            <span>${article.date} | ${article.readTime || '6 min read'}</span>
+          </div>
+          <p class="post-description">${article.excerpt || article.description}</p>
+          <div class="post-tags">
+            ${(article.tags || [article.category || 'research']).map(tag => `<a href="posts#tags" class="tag-pill">#${tag.toLowerCase().replace(/\s+/g, '-')}</a>`).join(' ')}
+          </div>
+        </li>
+      `).join('');
+    }
 
   } catch (err) {
     console.warn('Dynamic index loading fallback:', err);
