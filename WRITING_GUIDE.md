@@ -1,113 +1,49 @@
-# New Guide Content Authoring & Publishing Guide
+# New Guide Publishing & Content Submission Guide
 
-Welcome to the **New Guide** publishing and authoring guide. New Guide was created and founded by **Vijayaramanan** as an open, accessible publication platform for science, emerging technologies, system engineering, artificial intelligence, and applied physics.
+Welcome to the **New Guide** submission guidelines. New Guide is an open, accessible publication platform dedicated to science, emerging technologies, engineering, artificial intelligence, and applied physics.
 
-We welcome submissions and contributions from researchers, software engineers, physicists, and technical writers worldwide.
-
----
-
-## 1. How to Submit an Article or Tutorial
-
-To publish a new article or technical guide:
-
-1. **Prepare your Markdown file:** Create a new Markdown file (e.g. `articles/your-topic-slug.md` or `tutorials/your-topic-slug.md`).
-2. **Include YAML frontmatter:** Set your custom author name, title, category, tags, and summary.
-3. **Submit for review:** Submit via Pull Request or email your Markdown draft to `editor@newguide.org` with the subject `Article Submission - [Your Title]`.
-4. **Publishing & Attribution:** Once reviewed for technical depth and clarity, your article is published with full author byline, links, and attribution.
+We welcome submissions from researchers, software engineers, physicists, students, and technical builders worldwide.
 
 ---
 
-## 2. Standard YAML Frontmatter Schema
+## 1. How to Submit (Simple 3-Step Process)
 
-Every `.md` file must begin with:
+Publishing on New Guide is simple and beginner-friendly:
 
-```yaml
----
-title: "Exact Title of the Research Deep Dive or Tutorial"
-slug: "your-article-slug"
-author: "Your Name"  # Your full author name or Vijayaramanan
-date: "2026-08-18"
-category: "AI & Systems Architecture"  # e.g., Quantum Physics, Systems Architecture, AI
-tags: ["Machine Learning", "System Design", "Distributed Systems"]
-readTime: "10 min read"
-excerpt: "A 1-2 sentence executive summary of the research paper or tutorial for cards and search previews."
----
-```
+1. **Write your draft:** Prepare your article or tutorial in your preferred format (**Google Docs, Microsoft Word `.docx`, Markdown `.md`, or PDF**).
+2. **Follow the content format:** Include the basic details listed in the Content Format section below (Title, Author Name, Bio, Category, and Summary).
+3. **Send it to us:** Email your draft directly to **`mvijayramanan1210@gmail.com`** with the subject `Article Submission - [Your Title]` or submit via Pull Request.
+
+Our editorial team handles all website formatting, math typesetting, and responsive design, and publishes it with full credit to you!
 
 ---
 
-## 3. Scientific Markdown Extensions
+## 2. Document Content Format
 
-### 3.1 Mathematical Equations
-- **Centered Equation Block:** Wrap LaTeX equations with double dollar signs `$$ ... $$`.
-  ```latex
-  $$G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}$$
-  ```
-- **Inline Math:** Wrap inline symbols with single dollar signs `$ ... $`.
-  ```markdown
-  The local acceleration vector is $\vec{g} = -\nabla \Phi$.
-  ```
+When preparing your document, please include the following sections:
 
-### 3.2 Scientific Callout Boxes
-Use GitHub-style alert blockquotes to highlight hypotheses, notes, and warnings:
-
-```markdown
-> [!NOTE] KEY HYPOTHESIS
-> Explaining how the electromagnetic tensor couples to metric curvature.
-
-> [!HYPOTHESIS] RESEARCH TARGET
-> Specifying the laboratory frequency target (e.g. 2.45 GHz).
-
-> [!WARNING] EXPERIMENTAL CONSTRAINT
-> High-voltage dielectric breakdown limits in ultra-high vacuum.
-```
-
-### 3.3 Code & Simulation Blocks
-Use triple backticks with the language identifier:
-
-```python
-# Numerical Simulation: Compute Metric Tensor
-import numpy as np
-
-def compute_force(e_field, b_field):
-    return np.cross(e_field, b_field)
-```
-
-### 3.4 Table of Contents & Headings
-Use `## Section Title` for main sections and `### Subsection Title` for subsections. The reader automatically creates clickable, active-tracked table-of-contents links for all `h2` and `h3` headings.
+### 2.1 Header Information
+- **Article Title:** Clear and descriptive title for your post.
+- **Author Name:** Your full name or handle.
+- **Author Bio:** A short 1–2 sentence bio (e.g., *"AI Researcher"* or *"Systems Engineer"*).
+- **Profile / Social Links:** Your GitHub, X (Twitter), LinkedIn, or personal website link.
+- **Category:** Topic area (e.g., *Applied Physics, AI & Machine Learning, Software Architecture, Materials Science, Quantum Computing, or Tutorial*).
+- **Summary / Excerpt:** A 1–2 sentence summary explaining what readers will learn.
 
 ---
 
-## 4. Injecting Monthly Dispatches & News
-
-On `index.html`, locate the monthly updates wrapper and insert new dispatch entries inside the marked zone:
-
-```html
-<!-- AUTHOR: INJECT MONTHLY NEWS CONTENT HERE -->
-<div class="dispatch-item">
-  <div class="dispatch-dot"></div>
-  <div class="dispatch-header">
-    <span class="dispatch-date">SEPTEMBER 2026</span>
-    <span class="badge badge-cyan">LAB DISPATCH // 09-26</span>
-  </div>
-  <h3 class="dispatch-title">Title of Monthly Breakthrough</h3>
-  <p class="dispatch-body">
-    Detailed summary of experimental results or simulation runs...
-  </p>
-</div>
-```
+### 2.2 Article Body & Content Guidelines
+- **Clear Headings:** Organize your content into logical sections with subheadings (`H2`, `H3`).
+- **Practical & Rigorous:** Explain concepts with technical depth, real-world context, and clear reasoning.
+- **Code Blocks (If applicable):** Include clean, readable code snippets and specify the language (e.g., Python, C++, Rust, JavaScript).
+- **Math & Equations (If applicable):** Write standard LaTeX formulas (e.g., `$E = mc^2$` or `$$\nabla \times \mathbf{B} = \mu_0 \mathbf{J}$$`) or clear mathematical expressions.
+- **Diagrams & Images:** Attach any charts, system diagrams, or simulation screenshots with captions.
+- **References & Citations:** List source papers, documentation links, or GitHub repositories at the end of the document.
 
 ---
 
-## 5. Google AdSense Monetization Points
+## 3. Author Rights & Ownership
 
-Pre-configured ad containers are located across all pages:
-
-| Ad Container Class | Location | Recommended Size |
-| :--- | :--- | :--- |
-| `.ad-slot-header` | Top of Homepage, Articles, About | 728×90 or 970×90 Leaderboard |
-| `.ad-slot-sidebar` | Right sidebar on Article page | 300×250 (Medium Rectangle) or 300×600 (Skyscraper) |
-| `.ad-slot-inline` | Inside and below article content | 728×90 or Responsive In-Article |
-| `.ad-slot-footer` | Bottom banner on all pages | 970×90 or 728×90 Leaderboard |
-
-To activate AdSense, replace the placeholder `<div>` inside any `.ad-slot-container` with your `<ins class="adsbygoogle" ...></ins>` tag and script.
+- **100% Ownership:** You retain full copyright and ownership of your work.
+- **Permanent Attribution:** Every article includes your custom author profile card and social links to help grow your professional portfolio.
+- **Open & Free:** New Guide is free and accessible to readers and engineers worldwide.

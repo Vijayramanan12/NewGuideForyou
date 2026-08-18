@@ -8,86 +8,65 @@ tags:
   - guidelines
   - publishing
   - writing
-  - markdown
-readTime: "8 min read"
-excerpt: "The complete technical authoring, formatting, and submission guide for publishing research deep dives, engineering breakdowns, and tutorials on New Guide."
+  - submission
+readTime: "5 min read"
+excerpt: "Learn how to submit and publish your technical research, engineering deep dives, and tutorials on New Guide in a few simple steps."
 ---
 
 # Content Authoring & Publishing Guidelines
 
-Welcome to the **New Guide** publishing and authoring guide. New Guide was founded and created by **Vijayaramanan** as an open, accessible publication platform for science, emerging technologies, system engineering, artificial intelligence, and applied physics.
+Welcome to the **New Guide** publishing guidelines. New Guide is an open, accessible publication platform dedicated to science, emerging technologies, engineering, artificial intelligence, and applied physics.
 
-We welcome submissions and contributions from researchers, software engineers, physicists, and technical writers worldwide.
-
----
-
-## 1. How to Submit an Article or Tutorial
-
-To publish a new article or technical guide:
-
-1. **Prepare your Markdown file:** Create a new Markdown file (e.g. `articles/your-topic-slug.md` or `tutorials/your-topic-slug.md`).
-2. **Include YAML frontmatter:** Set your custom author name, title, category, tags, and summary.
-3. **Submit for review:** Email your Markdown draft to `mvijayramanan1210@gmail.com` with the subject `Article Submission - [Your Title]` or submit a Pull Request on GitHub.
-4. **Publishing & Attribution:** Once reviewed for technical depth and clarity, your article is published with full author byline, links, and attribution.
+We welcome submissions from researchers, software engineers, physicists, students, and technical builders worldwide.
 
 ---
 
-## 2. Standard YAML Frontmatter Schema
+## 1. How to Submit (Simple 3-Step Process)
 
-Every `.md` file must begin with:
+Publishing on New Guide is straightforward — you do not need complex Git configurations or formatting tools:
 
-```yaml
----
-title: "Exact Title of the Research Deep Dive or Tutorial"
-slug: "your-article-slug"
-author: "Your Name"  # Your full author name
-date: "2026-08-18"
-category: "AI & Systems Architecture"  # e.g., Quantum Physics, Systems Architecture, AI
-tags: ["Machine Learning", "System Design", "Distributed Systems"]
-readTime: "10 min read"
-excerpt: "A 1-2 sentence executive summary of the research paper or tutorial for cards and search previews."
----
-```
+1. **Write your draft:** Prepare your article or tutorial in your preferred format (**Google Docs, Microsoft Word `.docx`, Markdown `.md`, or PDF**).
+2. **Follow the content format:** Include the basic details listed in the Content Format section below (Title, Author Name, Bio, Category, and Summary).
+3. **Send it to us:** Click the **"Submit an Article / Tutorial"** button on our homepage or email your draft directly to **`mvijayramanan1210@gmail.com`**.
+
+Our editorial team handles all the website formatting, math typesetting, and responsive design, and publishes it with full credit to you!
 
 ---
 
-## 3. Scientific Markdown & Math Extensions
+## 2. Document Content Format
 
-### 3.1 Mathematical Equations
-- **Centered Equation Block:** Wrap LaTeX equations with double dollar signs `$$ ... $$`.
-  ```latex
-  $$G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}$$
-  ```
-- **Inline Math:** Wrap inline symbols with single dollar signs `$ ... $`.
-  ```markdown
-  The local acceleration vector is $\vec{g} = -\nabla \Phi$.
-  ```
+When preparing your document, please include the following sections:
 
-### 3.2 Scientific Callout Boxes
-Use GitHub-style alert blockquotes to highlight hypotheses, notes, and warnings:
-
-```markdown
-> [!NOTE] KEY HYPOTHESIS
-> Explaining how the electromagnetic tensor couples to metric curvature.
-
-> [!WARNING] EXPERIMENTAL SAFETY
-> High-voltage discharge requires isolated Faraday shielding.
-```
-
-### 3.3 Tables
-Use standard Markdown table formatting with header separators:
-
-```markdown
-| Parameter | Notation | Target Value | Units |
-| :--- | :--- | :--- | :--- |
-| Cavity Quality Factor | $Q_0$ | $2.4 \times 10^9$ | Dimensionless |
-| Cryogenic Base Temp | $T$ | $2.0$ | $\text{K}$ |
-```
+### 2.1 Header Information
+- **Article Title:** Clear and descriptive title for your post.
+- **Author Name:** Your full name or handle.
+- **Author Bio:** A short 1–2 sentence bio (e.g., *"AI Researcher at Stanford"* or *"Systems Engineer working on distributed systems"*).
+- **Profile / Social Links:** Your GitHub, X (Twitter), LinkedIn, or personal website link.
+- **Category:** Topic area (e.g., *Applied Physics, AI & Machine Learning, Software Architecture, Materials Science, Quantum Computing, or Tutorial*).
+- **Summary / Excerpt:** A 1–2 sentence summary explaining what readers will learn.
 
 ---
 
-## 4. Editorial Standards & Code Formatting
+### 2.2 Article Body & Content Guidelines
+- **Clear Headings:** Organize your content into logical sections with subheadings (`H2`, `H3`).
+- **Practical & Rigorous:** Explain concepts with technical depth, real-world context, and clear reasoning.
+- **Code Blocks (If applicable):** Include clean, readable code snippets and specify the language (e.g., Python, C++, Rust, JavaScript).
+- **Math & Equations (If applicable):** Write standard LaTeX formulas (e.g., `$E = mc^2$` or `$$\nabla \times \mathbf{B} = \mu_0 \mathbf{J}$$`) or clear mathematical expressions.
+- **Diagrams & Images:** Attach any charts, system diagrams, or simulation screenshots with captions.
+- **References & Citations:** List source papers, documentation links, or GitHub repositories at the end of the document.
 
-- **Code Blocks:** Specify the syntax language for syntax highlighting (e.g. ````python, ````javascript, ````rust, ````cpp).
-- **Attribution & Ownership:** Authors retain 100% ownership of their written content. Every post links to the author's personal website, GitHub, or social profiles.
-- **Tone & Rigor:** Articles should prioritize technical precision, mathematical backing, and reproducible examples.
+---
+
+## 3. What Happens After Submission?
+
+1. **Review & Proofreading:** We review your submission for clarity, technical flow, and formatting.
+2. **Typesetting & Preview:** We format your article with our clean dark/light theme, interactive Table of Contents, and syntax highlighting.
+3. **Publication & Attribution:** Your post goes live on New Guide with your author avatar, bio, and backlinks.
+
+---
+
+## 4. Author Rights & Ownership
+
+- **100% Ownership:** You retain full copyright and ownership of your work.
+- **Permanent Attribution:** Every article includes your custom author profile card and social links to help grow your professional portfolio.
+- **Open & Free:** New Guide is free and accessible to readers and engineers worldwide.
