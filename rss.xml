@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>New Guide | Emerging Tech &amp; Applied Science Deep Dives</title>
+    <link>https://newguideforyou.vercel.app</link>
+    <description>Comprehensive technical research deep dives, engineering breakdowns, and tutorials on AI, quantum computing, applied physics, and metric engineering.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Aug 2026 13:30:00 GMT</lastBuildDate>
+    <atom:link href="https://newguideforyou.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>mvijayramanan1210@gmail.com (Vijayaramanan)</managingEditor>
+    <webMaster>mvijayramanan1210@gmail.com (Vijayaramanan)</webMaster>
+
+    <item>
+      <title>How to Create a GitHub Repository and Add Code</title>
+      <link>https://newguideforyou.vercel.app/article?slug=how-to-create-a-github-repository-and-add-code</link>
+      <guid isPermaLink="true">https://newguideforyou.vercel.app/article?slug=how-to-create-a-github-repository-and-add-code</guid>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Vijayaramanan</dc:creator>
+      <category>Tutorial &amp; Technical Guide</category>
+      <description><![CDATA[Learn how to create a GitHub repository, connect it to a local project, commit your files, and push code safely from the command line.]]></description>
+    </item>
+
+    <item>
+      <title>Passive Radiative Cooling: The Physics of Cooling Without Power</title>
+      <link>https://newguideforyou.vercel.app/article?slug=passive-radiative-cooling-physics-without-power</link>
+      <guid isPermaLink="true">https://newguideforyou.vercel.app/article?slug=passive-radiative-cooling-physics-without-power</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Vijayaramanan</dc:creator>
+      <category>Applied Engineering &amp; Physics</category>
+      <description><![CDATA[How engineered surfaces reflect sunlight, emit infrared radiation through the atmospheric window, and reject heat to space without a compressor, refrigerant, or electrical input.]]></description>
+    </item>
+
+    <item>
+      <title>Neuromorphic Computing Explained: How Brain-Inspired Hardware Computes with Spikes</title>
+      <link>https://newguideforyou.vercel.app/article?slug=neuromorphic-computing-brain-inspired-hardware</link>
+      <guid isPermaLink="true">https://newguideforyou.vercel.app/article?slug=neuromorphic-computing-brain-inspired-hardware</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Vijayaramanan</dc:creator>
+      <category>Tutorial &amp; Technical Guide</category>
+      <description><![CDATA[Neuromorphic computers replace clocked, data-hungry processing with sparse spikes, local memory, and event-driven dynamics. This guide explains the models, chips, trade-offs, and engineering opportunities behind the architecture.]]></description>
+    </item>
+
+    <item>
+      <title>Autonomous AI Agents: The System Architecture Beyond the LLM</title>
+      <link>https://newguideforyou.vercel.app/article?slug=autonomous-ai-agents-system-architecture</link>
+      <guid isPermaLink="true">https://newguideforyou.vercel.app/article?slug=autonomous-ai-agents-system-architecture</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Vijayaramanan</dc:creator>
+      <category>Tutorial &amp; Technical Guide</category>
+      <description><![CDATA[An autonomous AI agent is not a larger prompt wrapped around an LLM. It is a closed-loop system combining state, planning, memory, tools, permissions, evaluation, and human oversight. This guide explains how those layers fit together—and where production systems fail.]]></description>
+    </item>
+
+    <item>
+      <title>The Post-Titanium Era: How Super Steel Could Scale Green Hydrogen Production</title>
+      <link>https://newguideforyou.vercel.app/article?slug=post-titanium-super-steel-green-hydrogen</link>
+      <guid isPermaLink="true">https://newguideforyou.vercel.app/article?slug=post-titanium-super-steel-green-hydrogen</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Vijayaramanan</dc:creator>
+      <category>Applied Engineering &amp; Physics</category>
+      <description><![CDATA[A new generation of corrosion-resistant “super steel” could replace selected titanium components in PEM electrolyzers, cutting material costs while surviving high-voltage, chloride-rich conditions.]]></description>
+    </item>
+
+    <item>
+      <title>Metric Engineering &amp; Dynamic Spacetime Geometries: Beyond Alcubierre</title>
+      <link>https://newguideforyou.vercel.app/article?slug=warp-metric-engineering</link>
+      <guid isPermaLink="true">https://newguideforyou.vercel.app/article?slug=warp-metric-engineering</guid>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Vijayaramanan</dc:creator>
+      <category>Metric Engineering</category>
+      <description><![CDATA[Analyzing physical energy condition modifications, Lentz positive-energy soliton solutions, and pulsed electromagnetic field generation for sub-light and superluminal metric bubbles.]]></description>
+    </item>
+
+    <item>
+      <title>Fundamentals of Gravitational Field Modification &amp; Metric Engineering</title>
+      <link>https://newguideforyou.vercel.app/article?slug=antigravity-basics</link>
+      <guid isPermaLink="true">https://newguideforyou.vercel.app/article?slug=antigravity-basics</guid>
+      <pubDate>Sun, 02 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Vijayaramanan</dc:creator>
+      <category>Theoretical Physics</category>
+      <description><![CDATA[A comprehensive investigation into theoretical paradigms, electromagnetic field coupling, and metric distortion equations governing non-Newtonian propulsion and gravitational shielding.]]></description>
+    </item>
+  </channel>
+</rss>
