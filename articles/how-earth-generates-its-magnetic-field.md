@@ -43,25 +43,17 @@ debated.[1](https://doi.org/10.1103/RevModPhys.72.1081 "Paul H. Roberts and Gary
 ## Table of Contents
 
 -   [The short answer](#the-short-answer)
--   [What part of Earth makes the
-    field?](#what-part-of-earth-makes-the-field)
+-   [What part of Earth makes the field?](#what-part-of-earth-makes-the-field)
 -   [The induction loop](#the-induction-loop)
 -   [The governing equations](#the-governing-equations)
--   [Why the flow does not simply die
-    away](#why-the-flow-does-not-simply-die-away)
+-   [Why the flow does not simply die away](#why-the-flow-does-not-simply-die-away)
 -   [What rotation contributes](#what-rotation-contributes)
--   [How the inner core powers
-    convection](#how-the-inner-core-powers-convection)
--   [What the field looks like at the
-    surface](#what-the-field-looks-like-at-the-surface)
--   [How scientists measure an invisible
-    process](#how-scientists-measure-an-invisible-process)
--   [What simulations can and cannot
-    prove](#what-simulations-can-and-cannot-prove)
--   [The unresolved energy-budget
-    problem](#the-unresolved-energy-budget-problem)
--   [So what? Engineering
-    consequences](#so-what-engineering-consequences)
+-   [How the inner core powers convection](#how-the-inner-core-powers-convection)
+-   [What the field looks like at the surface](#what-the-field-looks-like-at-the-surface)
+-   [How scientists measure an invisible process](#how-scientists-measure-an-invisible-process)
+-   [What simulations can and cannot prove](#what-simulations-can-and-cannot-prove)
+-   [The unresolved energy-budget problem](#the-unresolved-energy-budget-problem)
+-   [So what? Engineering consequences](#so-what-engineering-consequences)
 -   [Conclusion](#conclusion)
 -   [Suggested internal links](#suggested-internal-links)
 -   [References](#references)
