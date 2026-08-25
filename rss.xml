@@ -5,10 +5,20 @@
     <link>https://newguideforyou.vercel.app</link>
     <description>Comprehensive technical research deep dives, engineering breakdowns, and tutorials on AI, quantum computing, applied physics, and metric engineering.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Aug 2026 13:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 15:00:00 GMT</lastBuildDate>
     <atom:link href="https://newguideforyou.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
     <managingEditor>mvijayramanan1210@gmail.com (Vijayaramanan)</managingEditor>
     <webMaster>mvijayramanan1210@gmail.com (Vijayaramanan)</webMaster>
+
+    <item>
+      <title>How Earth Generates Its Magnetic Field: The Physics of the Geodynamo</title>
+      <link>https://newguideforyou.vercel.app/article?slug=how-earth-generates-its-magnetic-field</link>
+      <guid isPermaLink="true">https://newguideforyou.vercel.app/article?slug=how-earth-generates-its-magnetic-field</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Vijayaramanan</dc:creator>
+      <category>Applied Engineering &amp; Physics</category>
+      <description><![CDATA[Earth's magnetic field is a self-sustaining magnetohydrodynamic dynamo powered by convection, rotation, and the cooling and chemical evolution of the liquid outer core.]]></description>
+    </item>
 
     <item>
       <title>How to Create a GitHub Repository and Add Code</title>

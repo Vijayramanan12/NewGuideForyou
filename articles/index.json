@@ -1,6 +1,22 @@
 {
   "articles": [
     {
+      "slug": "how-earth-generates-its-magnetic-field",
+      "title": "How Earth Generates Its Magnetic Field: The Physics of the Geodynamo",
+      "author": "Vijayaramanan",
+      "date": "24 Aug 2026",
+      "category": "Applied Engineering & Physics",
+      "tags": [
+        "geodynamo",
+        "geomagnetism",
+        "magnetohydrodynamics",
+        "Earth science",
+        "space weather"
+      ],
+      "readTime": "14 min read",
+      "excerpt": "Earth's magnetic field is a self-sustaining magnetohydrodynamic dynamo powered by convection, rotation, and the cooling and chemical evolution of the liquid outer core."
+    },
+    {
       "slug": "how-to-create-a-github-repository-and-add-code",
       "title": "How to Create a GitHub Repository and Add Code",
       "author": "Vijayaramanan",
