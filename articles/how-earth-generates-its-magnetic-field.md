@@ -37,26 +37,9 @@ orbit. It must also separate what is established from what remains an
 active research problem. The existence of a core dynamo is strongly
 supported; the detailed energy budget that has kept it running for
 billions of years is still
-debated.[1](https://doi.org/10.1103/RevModPhys.72.1081 "Paul H. Roberts and Gary A. Glatzmaier, Geodynamo theory and simulations, Reviews of Modern Physics 72, 1081 (2000).")
-[2](https://doi.org/10.1038/s43017-022-00264-1 "Maylis Landeau, Alexandre Fournier, Henri-Claude Nataf, David Cébron, and Nathanaël Schaeffer, Sustaining Earth’s magnetic dynamo, Nature Reviews Earth & Environment 3, 255–269 (2022).")
+debated.[1](https://doi.org/10.1103/RevModPhys.72.1081 "Paul H. Roberts and Gary A. Glatzmaier, Geodynamo theory and simulations, Reviews of Modern Physics 72, 1081 (2000).") [2](https://doi.org/10.1038/s43017-022-00264-1 "Maylis Landeau, Alexandre Fournier, Henri-Claude Nataf, David Cébron, and Nathanaël Schaeffer, Sustaining Earth’s magnetic dynamo, Nature Reviews Earth & Environment 3, 255–269 (2022).")
 
-## Table of Contents
-
--   [The short answer](#the-short-answer)
--   [What part of Earth makes the field?](#what-part-of-earth-makes-the-field)
--   [The induction loop](#the-induction-loop)
--   [The governing equations](#the-governing-equations)
--   [Why the flow does not simply die away](#why-the-flow-does-not-simply-die-away)
--   [What rotation contributes](#what-rotation-contributes)
--   [How the inner core powers convection](#how-the-inner-core-powers-convection)
--   [What the field looks like at the surface](#what-the-field-looks-like-at-the-surface)
--   [How scientists measure an invisible process](#how-scientists-measure-an-invisible-process)
--   [What simulations can and cannot prove](#what-simulations-can-and-cannot-prove)
--   [The unresolved energy-budget problem](#the-unresolved-energy-budget-problem)
--   [So what? Engineering consequences](#so-what-engineering-consequences)
--   [Conclusion](#conclusion)
--   [Suggested internal links](#suggested-internal-links)
--   [References](#references)
+---
 
 ## The short answer
 

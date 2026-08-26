@@ -364,6 +364,42 @@
   text-transform: uppercase;
 }
 
+/* Scientific Citation References */
+.citation-ref {
+  font-size: 0.76em;
+  line-height: 0;
+  vertical-align: super;
+  margin-left: 0.15rem;
+  margin-right: 0.15rem;
+}
+
+.citation-ref a {
+  display: inline-block;
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  background: rgba(251, 146, 60, 0.12);
+  border: 1px solid rgba(251, 146, 60, 0.25);
+  transition: all 0.15s ease;
+  line-height: 1.2;
+}
+
+.citation-ref a:hover {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+[data-theme="light"] .citation-ref a {
+  background: rgba(234, 88, 12, 0.08);
+  border-color: rgba(234, 88, 12, 0.2);
+}
+
 /* Post Footer & Tags */
 .post-footer {
   padding-top: 2.5rem;

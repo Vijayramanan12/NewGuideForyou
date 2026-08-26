@@ -326,8 +326,15 @@ function parseInlineMarkdown(text) {
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
     // Inline code
     .replace(/`([^`]+)`/g, '<code>$1</code>')
-    // Links
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+    // Links with optional title: [text](url "title") or [text](url)
+    .replace(/\[([^\]]+)\]\(\s*([^\s"\)]+)(?:\s+"([^"]*)")?\s*\)/g, (match, label, url, title) => {
+      const isCitation = /^\d+(?:[,\s\-–]\d+)*$/.test(label.trim());
+      const titleAttr = title ? ` title="${escapeHtml(title)}"` : '';
+      if (isCitation) {
+        return `<sup class="citation-ref"><a href="${url}" target="_blank" rel="noopener noreferrer"${titleAttr}>[${label.trim()}]</a></sup>`;
+      }
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer"${titleAttr}>${label}</a>`;
+    });
 }
 
 function escapeHtml(str) {
