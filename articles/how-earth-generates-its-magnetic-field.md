@@ -201,25 +201,13 @@ decay.
 
 The energy pathway is therefore:
 
-  -----------------------------------------------------------------------
-  Stage                   Physical process        Role in the dynamo
-  ----------------------- ----------------------- -----------------------
-  1                       Secular cooling and     Supply available
-                          chemical                gravitational and
-                          differentiation         thermal power
-
-  2                       Thermal and             Drive motion in the
-                          compositional buoyancy  liquid outer core
-
-  3                       Motional induction      Convert fluid motion
-                                                  into electric currents
-
-  4                       Current-generated       Amplify and maintain
-                          magnetic field          the internal field
-
-  5                       Ohmic dissipation and   Consume part of the
-                          viscous losses          available power
-  -----------------------------------------------------------------------
+| Stage | Physical Process | Role in the Dynamo |
+| :---: | :--- | :--- |
+| **1** | Secular cooling and chemical differentiation | Supply available gravitational and thermal power |
+| **2** | Thermal and compositional buoyancy | Drive convective motion in the liquid outer core |
+| **3** | Motional induction | Convert fluid motion into electric currents |
+| **4** | Current-generated magnetic field | Amplify and maintain the internal magnetic field |
+| **5** | Ohmic dissipation and viscous losses | Consume part of the available mechanical power |
 
 This is not perpetual motion. The core has a finite thermal and chemical
 history. The field survives because the rate of energy supply is
