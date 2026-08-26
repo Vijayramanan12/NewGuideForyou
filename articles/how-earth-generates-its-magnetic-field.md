@@ -133,85 +133,55 @@ rule.[1](https://doi.org/10.1103/RevModPhys.72.1081 "Paul H. Roberts and Gary A.
 
 ## The governing equations
 
-The central electromagnetic equation is the **magnetic induction
-equation**:
+The central electromagnetic equation is the **magnetic induction equation**:
 
-\[ `\frac{\partial \mathbf{B}}{\partial t}`{=tex} =
-`\nabla `{=tex}`\times `{=tex}(`\mathbf{u}`{=tex}
-`\times `{=tex}`\mathbf{B}`{=tex}) + `\eta `{=tex}`\nabla`{=tex}\^2
-`\mathbf{B}`{=tex}. \]
+$$
+\frac{\partial \mathbf{B}}{\partial t} = \nabla \times (\mathbf{u} \times \mathbf{B}) + \eta \nabla^2 \mathbf{B}
+$$
 
-Here, (`\mathbf{B}`{=tex}) is the magnetic-field vector,
-(`\mathbf{u}`{=tex}) is the fluid velocity, and (`\eta`{=tex}) is the
-magnetic diffusivity. For a uniform conductor,
+Here, $\mathbf{B}$ is the magnetic-field vector, $\mathbf{u}$ is the fluid velocity, and $\eta$ is the magnetic diffusivity. For a uniform conductor,
 
-\[ `\eta `{=tex}= `\frac{1}{\mu \sigma}`{=tex}, \]
+$$
+\eta = \frac{1}{\mu \sigma}
+$$
 
-where (`\mu`{=tex}) is magnetic permeability and (`\sigma`{=tex}) is
-electrical conductivity. The first term on the right represents
-advection and induction by moving fluid. The second represents magnetic
-diffusion caused by finite conductivity.
+where $\mu$ is magnetic permeability and $\sigma$ is electrical conductivity. The first term on the right represents advection and induction by moving fluid. The second represents magnetic diffusion caused by finite conductivity.
 
-This equation follows from a standard low-speed, quasi-neutral
-magnetohydrodynamic approximation. Begin with Ohm's law for a moving
-conductor,
+This equation follows from a standard low-speed, quasi-neutral magnetohydrodynamic approximation. Begin with Ohm's law for a moving conductor,
 
-\[ `\mathbf{J}`{=tex} = `\sigma`{=tex}(`\mathbf{E}`{=tex} +
-`\mathbf{u}`{=tex} `\times `{=tex}`\mathbf{B}`{=tex}), \]
+$$
+\mathbf{J} = \sigma(\mathbf{E} + \mathbf{u} \times \mathbf{B})
+$$
 
-where (`\mathbf{J}`{=tex}) is current density and (`\mathbf{E}`{=tex})
-is the electric field. Combine it with Faraday's law,
+where $\mathbf{J}$ is current density and $\mathbf{E}$ is the electric field. Combine it with Faraday's law,
 
-\[ `\frac{\partial \mathbf{B}}{\partial t}`{=tex} =
--`\nabla `{=tex}`\times `{=tex}`\mathbf{E}`{=tex}, \]
+$$
+\frac{\partial \mathbf{B}}{\partial t} = -\nabla \times \mathbf{E}
+$$
 
 and Ampère's law without the displacement-current term,
 
-\[ `\nabla `{=tex}`\times `{=tex}`\mathbf{B}`{=tex} =
-`\mu `{=tex}`\mathbf{J}`{=tex}. \]
+$$
+\nabla \times \mathbf{B} = \mu \mathbf{J}
+$$
 
-Assuming constant (`\mu`{=tex}) and (`\sigma`{=tex}), and using
-(`\nabla `{=tex}`\cdot `{=tex}`\mathbf{B}`{=tex}=0), yields the
-induction equation above. The approximation is appropriate for slowly
-moving planetary liquid metal compared with electromagnetic signal
-speeds; it is not a complete description of compressible core
-turbulence, but it isolates the mechanism that creates and destroys
-magnetic
-field.[1](https://doi.org/10.1103/RevModPhys.72.1081 "Paul H. Roberts and Gary A. Glatzmaier, Geodynamo theory and simulations, Reviews of Modern Physics 72, 1081 (2000).")
-[4](https://doi.org/10.1080/03091929.2019.1597074 "Johannes Wicht and Sabrina Sanchez, Advances in geodynamo modelling, Geophysical & Astrophysical Fluid Dynamics 113 (2019).")
+Assuming constant $\mu$ and $\sigma$, and using $\nabla \cdot \mathbf{B} = 0$, yields the induction equation above. The approximation is appropriate for slowly moving planetary liquid metal compared with electromagnetic signal speeds; it is not a complete description of compressible core turbulence, but it isolates the mechanism that creates and destroys magnetic field.[1](https://doi.org/10.1103/RevModPhys.72.1081 "Paul H. Roberts and Gary A. Glatzmaier, Geodynamo theory and simulations, Reviews of Modern Physics 72, 1081 (2000).") [4](https://doi.org/10.1080/03091929.2019.1597074 "Johannes Wicht and Sabrina Sanchez, Advances in geodynamo modelling, Geophysical & Astrophysical Fluid Dynamics 113 (2019).")
 
 A useful dimensionless diagnostic is the **magnetic Reynolds number**:
 
-\[ Rm = `\frac{UL}{\eta}`{=tex}, \]
+$$
+Rm = \frac{UL}{\eta}
+$$
 
-where (U) is a characteristic flow speed and (L) is a characteristic
-length scale. Large (Rm) means that advection and induction compete
-successfully with diffusion. However, a large value alone is not a proof
-of dynamo action. The flow must also produce the spatial structure and
-asymmetry needed for net field amplification. This is why numerical
-geodynamo studies examine field morphology, energy growth, reversals,
-and force balance rather than treating one dimensionless number as a
-sufficient
-answer.[4](https://doi.org/10.1080/03091929.2019.1597074 "Johannes Wicht and Sabrina Sanchez, Advances in geodynamo modelling, Geophysical & Astrophysical Fluid Dynamics 113 (2019).")
+where $U$ is a characteristic flow speed and $L$ is a characteristic length scale. Large $Rm$ means that advection and induction compete successfully with diffusion. However, a large value alone is not a proof of dynamo action. The flow must also produce the spatial structure and asymmetry needed for net field amplification. This is why numerical geodynamo studies examine field morphology, energy growth, reversals, and force balance rather than treating one dimensionless number as a sufficient answer.[4](https://doi.org/10.1080/03091929.2019.1597074 "Johannes Wicht and Sabrina Sanchez, Advances in geodynamo modelling, Geophysical & Astrophysical Fluid Dynamics 113 (2019).")
 
-The flow itself is governed by momentum conservation in a rotating
-frame. A schematic Boussinesq form is
+The flow itself is governed by momentum conservation in a rotating frame. A schematic Boussinesq form is
 
-\[ `\rho`{=tex}`\left`{=tex}(
-`\frac{\partial \mathbf{u}}{\partial t}`{=tex} +
-`\mathbf{u}`{=tex}`\cdot`{=tex}`\nabla`{=tex}`\mathbf{u}`{=tex} +
-2`\mathbf{\Omega}`{=tex}`\times`{=tex}`\mathbf{u}`{=tex} `\right`{=tex})
-= -`\nabla `{=tex}p + `\rho`{=tex}'`\mathbf{g}`{=tex} +
-`\mathbf{J}`{=tex}`\times`{=tex}`\mathbf{B}`{=tex} +
-`\rho`{=tex}`\nu`{=tex}`\nabla`{=tex}\^2`\mathbf{u}`{=tex}. \]
+$$
+\rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} + 2\mathbf{\Omega} \times \mathbf{u} \right) = -\nabla p + \rho'\mathbf{g} + \mathbf{J} \times \mathbf{B} + \rho \nu \nabla^2 \mathbf{u}
+$$
 
-The terms represent, respectively, fluid inertia, the Coriolis force,
-pressure, buoyancy, the Lorentz force, and viscosity. Here
-(`\rho`{=tex}) is a reference density, (p) is pressure,
-(`\rho`{=tex}'`\mathbf{g}`{=tex}) is the buoyancy contribution,
-(`\mathbf{J}`{=tex}`\times`{=tex}`\mathbf{B}`{=tex}) is the magnetic
-force, (`\nu`{=tex}) is kinematic viscosity, and
-(`\mathbf{\Omega}`{=tex}) is the planetary rotation vector.
+The terms represent, respectively, fluid inertia, the Coriolis force, pressure, buoyancy, the Lorentz force, and viscosity. Here $\rho$ is a reference density, $p$ is pressure, $\rho'\mathbf{g}$ is the buoyancy contribution, $\mathbf{J} \times \mathbf{B}$ is the magnetic force, $\nu$ is kinematic viscosity, and $\mathbf{\Omega}$ is the planetary rotation vector.
 
 Earth's core is not literally a constant-density fluid, so this equation
 is a controlled approximation. Modern models can include thermal and
@@ -263,7 +233,7 @@ linked.[1](https://doi.org/10.1103/RevModPhys.72.1081 "Paul H. Roberts and Gary 
 ## What rotation contributes
 
 The Coriolis term,
-(2`\mathbf{\Omega}`{=tex}`\times`{=tex}`\mathbf{u}`{=tex}), tends to
+$2\mathbf{\Omega} \times \mathbf{u}$, tends to
 constrain rapidly rotating convection into structures aligned with the
 rotation axis. In a nonmagnetic rapidly rotating fluid, this produces a
 strong quasi-geostrophic tendency: pressure and Coriolis forces nearly
@@ -271,7 +241,7 @@ balance, while the remaining imbalance drives convection and other
 motions.
 
 The magnetic field changes this balance. The Lorentz force,
-(`\mathbf{J}`{=tex}`\times`{=tex}`\mathbf{B}`{=tex}), resists some of
+$\mathbf{J} \times \mathbf{B}$, resists some of
 the rotational constraint and couples different parts of the flow
 through magnetic tension. Some geodynamo studies describe the dominant
 large-scale force balance in terms of **MAC balance**---Magnetic,
@@ -365,18 +335,19 @@ infer its dynamics from the field that reaches the surface and from the
 way that field changes.
 
 A modern magnetic observatory commonly combines a vector magnetometer
-with an absolute scalar instrument. If (X), (Y), and (Z) denote north,
+with an absolute scalar instrument. If $X$, $Y$, and $Z$ denote north,
 east, and downward components, then the horizontal intensity and total
 intensity are
 
-\[ H = `\sqrt{X^2+Y^2}`{=tex}, `\qquad `{=tex}F =
-`\sqrt{X^2+Y^2+Z^2}`{=tex}. \]
+$$
+H = \sqrt{X^2 + Y^2}, \qquad F = \sqrt{X^2 + Y^2 + Z^2}
+$$
 
 Declination and inclination can be expressed as
 
-\[ D = `\arctan`{=tex}`\left`{=tex}(`\frac{Y}{X}`{=tex}`\right`{=tex}),
-`\qquad `{=tex}I =
-`\arctan`{=tex}`\left`{=tex}(`\frac{Z}{H}`{=tex}`\right`{=tex}). \]
+$$
+D = \arctan\left(\frac{Y}{X}\right), \qquad I = \arctan\left(\frac{Z}{H}\right)
+$$
 
 These are measurement definitions, not a complete inversion of the core.
 The observed signal includes internal, external, induced, and crustal
