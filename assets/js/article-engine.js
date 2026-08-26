@@ -22,9 +22,9 @@ async function initArticleEngine() {
   const authorNameEl = document.getElementById('authorName');
 
   try {
-    let response = await fetch(`articles/${slug}.md`);
+    let response = await fetch(`articles/${slug}.md?v=${Date.now()}`);
     if (!response.ok) {
-      response = await fetch(`tutorials/${slug}.md`);
+      response = await fetch(`tutorials/${slug}.md?v=${Date.now()}`);
     }
     if (!response.ok) {
       throw new Error(`File "${slug}.md" not found in articles/ or tutorials/.`);
@@ -58,25 +58,27 @@ async function initArticleEngine() {
       tocSidebar.style.display = 'none';
     }
 
+    // Share Button Handler
+    initShareButtons(frontmatter.title || document.title);
+
     // Initialize Reading Progress Bar
     initReadingProgress();
-    initShareButtons();
 
-  } catch (error) {
-    console.error('Error loading article:', error);
+  } catch (err) {
+    console.error('Article Engine Error:', err);
     if (contentCanvas) {
       contentCanvas.innerHTML = `
-        <div class="callout callout-warning">
-          <div class="callout-title">⚠️ Article Loading Error</div>
-          <p>Could not load the markdown file for <code>${slug}.md</code>.</p>
-          <p>Please make sure the file exists in the <code>articles/</code> directory with proper frontmatter.</p>
+        <div class="article-error-state" style="padding: 3rem 0; text-align: center;">
+          <h2 style="color: var(--color-accent); margin-bottom: 1rem;">Document Unavailable</h2>
+          <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">Could not load technical document <code>${slug}.md</code>.</p>
+          <a href="posts" class="back-btn">&larr; Return to All Posts</a>
         </div>
       `;
     }
   }
 }
 
-/* Parse YAML Frontmatter */
+/* Frontmatter Parser (YAML Header) */
 function parseFrontmatter(rawText) {
   const frontmatterRegex = /^---\s*[\r\n]+([\s\S]*?)[\r\n]+---\s*[\r\n]+([\s\S]*)$/;
   const match = rawText.match(frontmatterRegex);
@@ -125,6 +127,13 @@ function estimateReadTime(text) {
 function renderScientificMarkdown(markdown) {
   const headings = [];
   let html = markdown;
+
+  // 0. Pre-clean Pandoc raw {=tex} tags or fragmented TeX symbols if present
+  html = html.replace(/`([^`]+)`\{=tex\}/g, '$1');
+  html = html.replace(/\{=tex\}/g, '');
+  html = html.replace(/\\\[([\s\S]*?)\\\]/g, '\n\n$$\n$1\n$$\n\n');
+  html = html.replace(/\\\(([\s\S]*?)\\\)/g, '$$$1$$');
+  html = html.replace(/\(\\mathbf\{([^}]+)\}\)/g, '$\\mathbf{$1}$');
 
   const equations = [];
   const inlineMath = [];
