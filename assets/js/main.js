@@ -1,11 +1,12 @@
 /**
  * ASTROPAPER INTERACTIVE ENGINE (NEW GUIDE)
- * Features: Dark/Light Mode Theme Toggle, Search Filter, Responsive Nav
+ * Features: Dark/Light Mode Theme Toggle, Search Filter, Responsive Nav, Hash Nav Highlight
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initSearch();
+  initNavHighlight();
 });
 
 /* Theme Toggle (Dark/Light) */
@@ -73,4 +74,43 @@ function initSearch() {
       });
     });
   }
+}
+
+/* Nav Active State — handles hash anchor links like #tutorials */
+function initNavHighlight() {
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  function setActiveByHash() {
+    const hash = window.location.hash;
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      // Only remove active from hash-based links (not page-based ones set statically)
+      if (href && href.startsWith('#')) {
+        link.classList.remove('active');
+      }
+      // Highlight the link whose href matches the current hash
+      if (hash && href === hash) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  // Set active on click immediately (before scroll completes)
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      link.addEventListener('click', () => {
+        navLinks.forEach(l => {
+          if (l.getAttribute('href') && l.getAttribute('href').startsWith('#')) {
+            l.classList.remove('active');
+          }
+        });
+        link.classList.add('active');
+      });
+    }
+  });
+
+  // Set on page load if URL already has a hash (e.g. direct link to /#tutorials)
+  setActiveByHash();
+  window.addEventListener('hashchange', setActiveByHash);
 }
