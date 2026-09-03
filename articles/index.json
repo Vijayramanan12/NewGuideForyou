@@ -1,6 +1,22 @@
 {
   "articles": [
     {
+      "slug": "why-earthquakes-happen",
+      "title": "Why Earthquakes Happen: Fault Stress, Friction, and Seismic Rupture",
+      "author": "Vijayaramanan",
+      "date": "31 Aug 2026",
+      "category": "Applied Engineering & Physics",
+      "tags": [
+        "earthquakes",
+        "seismology",
+        "plate tectonics",
+        "fault mechanics",
+        "geophysics"
+      ],
+      "readTime": "15 min read",
+      "excerpt": "Earthquakes occur when accumulated tectonic stress overcomes friction on a fault and a rupture propagates through the crust. This guide explains the mechanics from plate motion and elastic rebound to seismic waves, magnitude, and hazard engineering."
+    },
+    {
       "slug": "how-earth-generates-its-magnetic-field",
       "title": "How Earth Generates Its Magnetic Field: The Physics of the Geodynamo",
       "author": "Vijayaramanan",

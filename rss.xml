@@ -5,10 +5,20 @@
     <link>https://newguideforyou.vercel.app</link>
     <description>Comprehensive technical research deep dives, engineering breakdowns, and tutorials on AI, quantum computing, applied physics, and metric engineering.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 15:00:00 GMT</lastBuildDate>
     <atom:link href="https://newguideforyou.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
     <managingEditor>mvijayramanan1210@gmail.com (Vijayaramanan)</managingEditor>
     <webMaster>mvijayramanan1210@gmail.com (Vijayaramanan)</webMaster>
+
+    <item>
+      <title>Why Earthquakes Happen: Fault Stress, Friction, and Seismic Rupture</title>
+      <link>https://newguideforyou.vercel.app/article?slug=why-earthquakes-happen</link>
+      <guid isPermaLink="true">https://newguideforyou.vercel.app/article?slug=why-earthquakes-happen</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Vijayaramanan</dc:creator>
+      <category>Applied Engineering &amp; Physics</category>
+      <description><![CDATA[Earthquakes occur when accumulated tectonic stress overcomes friction on a fault and a rupture propagates through the crust. This guide explains the mechanics from plate motion and elastic rebound to seismic waves, magnitude, and hazard engineering.]]></description>
+    </item>
 
     <item>
       <title>How Earth Generates Its Magnetic Field: The Physics of the Geodynamo</title>
