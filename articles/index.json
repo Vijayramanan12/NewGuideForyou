@@ -1,6 +1,58 @@
 {
   "articles": [
     {
+      "slug": "how-to-build-low-cost-earthquake-monitor-raspberry-shake",
+      "title": "How to Build a Low-Cost Earthquake Monitor with Raspberry Shake",
+      "author": "Vijayaramanan",
+      "date": "17 Sep 2026",
+      "category": "Tutorial & Technical Guide",
+      "isTutorial": true,
+      "tags": [
+        "tutorial",
+        "earthquake monitor",
+        "Raspberry Shake",
+        "seismology",
+        "seismograph",
+        "seismic waves"
+      ],
+      "readTime": "12 min read",
+      "excerpt": "Set up a Raspberry Shake as a personal earthquake monitor, stream live seismic waveforms, establish a quiet baseline, and interpret events responsibly."
+    },
+    {
+      "slug": "what-makes-a-rocket-reusable",
+      "title": "What Makes a Rocket Reusable? The Engineering of Controlled Recovery",
+      "author": "Vijayaramanan",
+      "date": "14 Sep 2026",
+      "category": "Applied Engineering & Physics",
+      "tags": [
+        "reusable rockets",
+        "aerospace engineering",
+        "launch vehicles",
+        "rocket propulsion",
+        "guidance and control"
+      ],
+      "readTime": "15 min read",
+      "excerpt": "A reusable rocket is not simply an expendable rocket with landing legs. It is a launch system designed to reserve propellant, survive ascent and atmospheric entry, guide itself through a narrow landing corridor, and return its most valuable hardware to flight condition."
+    },
+    {
+      "slug": "how-to-extract-superconducting-resonator-quality-factor-from-s21-data",
+      "title": "How to Extract the Quality Factor of a Superconducting Resonator from S21 Data",
+      "author": "Vijayaramanan",
+      "date": "10 Sep 2026",
+      "category": "Tutorial & Technical Guide",
+      "isTutorial": true,
+      "tags": [
+        "tutorial",
+        "superconducting resonator",
+        "quality factor",
+        "S21 data",
+        "circle fitting",
+        "microwave measurement"
+      ],
+      "readTime": "13 min read",
+      "excerpt": "Learn how to extract resonance frequency and internal quality factor from complex S21 data using bandwidth checks, circle fitting, residual analysis, and reproducible reporting."
+    },
+    {
       "slug": "why-earthquakes-happen",
       "title": "Why Earthquakes Happen: Fault Stress, Friction, and Seismic Rupture",
       "author": "Vijayaramanan",

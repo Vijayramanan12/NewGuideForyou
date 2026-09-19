@@ -28,6 +28,24 @@
 
   <!-- Published Scientific Research Articles & Guides -->
   <url>
+    <loc>https://newguideforyou.vercel.app/article?slug=how-to-build-low-cost-earthquake-monitor-raspberry-shake</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://newguideforyou.vercel.app/article?slug=what-makes-a-rocket-reusable</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://newguideforyou.vercel.app/article?slug=how-to-extract-superconducting-resonator-quality-factor-from-s21-data</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://newguideforyou.vercel.app/article?slug=why-earthquakes-happen</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>

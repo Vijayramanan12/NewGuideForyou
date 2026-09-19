@@ -5,10 +5,40 @@
     <link>https://newguideforyou.vercel.app</link>
     <description>Comprehensive technical research deep dives, engineering breakdowns, and tutorials on AI, quantum computing, applied physics, and metric engineering.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 15:00:00 GMT</lastBuildDate>
     <atom:link href="https://newguideforyou.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
     <managingEditor>mvijayramanan1210@gmail.com (Vijayaramanan)</managingEditor>
     <webMaster>mvijayramanan1210@gmail.com (Vijayaramanan)</webMaster>
+
+    <item>
+      <title>How to Build a Low-Cost Earthquake Monitor with Raspberry Shake</title>
+      <link>https://newguideforyou.vercel.app/article?slug=how-to-build-low-cost-earthquake-monitor-raspberry-shake</link>
+      <guid isPermaLink="true">https://newguideforyou.vercel.app/article?slug=how-to-build-low-cost-earthquake-monitor-raspberry-shake</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Vijayaramanan</dc:creator>
+      <category>Tutorial &amp; Technical Guide</category>
+      <description><![CDATA[Set up a Raspberry Shake as a personal earthquake monitor, stream live seismic waveforms, establish a quiet baseline, and interpret events responsibly.]]></description>
+    </item>
+
+    <item>
+      <title>What Makes a Rocket Reusable? The Engineering of Controlled Recovery</title>
+      <link>https://newguideforyou.vercel.app/article?slug=what-makes-a-rocket-reusable</link>
+      <guid isPermaLink="true">https://newguideforyou.vercel.app/article?slug=what-makes-a-rocket-reusable</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Vijayaramanan</dc:creator>
+      <category>Applied Engineering &amp; Physics</category>
+      <description><![CDATA[A reusable rocket is not simply an expendable rocket with landing legs. It is a launch system designed to reserve propellant, survive ascent and atmospheric entry, guide itself through a narrow landing corridor, and return its most valuable hardware to flight condition.]]></description>
+    </item>
+
+    <item>
+      <title>How to Extract the Quality Factor of a Superconducting Resonator from S21 Data</title>
+      <link>https://newguideforyou.vercel.app/article?slug=how-to-extract-superconducting-resonator-quality-factor-from-s21-data</link>
+      <guid isPermaLink="true">https://newguideforyou.vercel.app/article?slug=how-to-extract-superconducting-resonator-quality-factor-from-s21-data</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Vijayaramanan</dc:creator>
+      <category>Tutorial &amp; Technical Guide</category>
+      <description><![CDATA[Learn how to extract resonance frequency and internal quality factor from complex S21 data using bandwidth checks, circle fitting, residual analysis, and reproducible reporting.]]></description>
+    </item>
 
     <item>
       <title>Why Earthquakes Happen: Fault Stress, Friction, and Seismic Rupture</title>
