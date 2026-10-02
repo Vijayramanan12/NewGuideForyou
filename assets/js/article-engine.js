@@ -41,6 +41,13 @@ async function initArticleEngine() {
     if (dateEl) dateEl.textContent = frontmatter.date || new Date().toISOString().split('T')[0];
     if (readTimeEl) readTimeEl.textContent = frontmatter.readTime || estimateReadTime(body);
     if (authorNameEl) authorNameEl.textContent = frontmatter.author || 'Vijayaramanan';
+    // Update meta description per article
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && (frontmatter.description || frontmatter.excerpt)) {
+      let desc = (frontmatter.description || frontmatter.excerpt).replace(/['"]/g, '').trim();
+      if (desc.length > 160) desc = desc.substring(0, 157) + '...';
+      metaDesc.setAttribute('content', desc);
+    }
 
     // Render Markdown Body
     const { html, headings } = renderScientificMarkdown(body);
