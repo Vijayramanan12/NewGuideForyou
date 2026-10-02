@@ -1,6 +1,24 @@
 {
   "articles": [
     {
+      "slug": "jev-vs-laya-system-one-decision-models",
+      "title": "Jev vs Laya: System One Decision Models and the New Class of AI That Doesn't Talk",
+      "author": "Vijayaramanan",
+      "date": "02 Oct 2026",
+      "category": "Emerging Technologies",
+      "tags": [
+        "System One",
+        "Jev",
+        "Laya",
+        "AI agents",
+        "decision models",
+        "TypeSafe AI",
+        "Convai Innovations"
+      ],
+      "readTime": "14 min read",
+      "excerpt": "Jev and Laya are System One decision models \u2014 non-generative AI that returns typed decisions with calibrated probabilities in a single forward pass. This article explains the architecture, benchmarks, and where each model actually wins."
+    },
+    {
       "slug": "chatgpt-6-astra",
       "title": "ChatGPT-6 Astra Explained: Computer-Using AI, Frontier Benchmarks, Safety, and Real-World Reviews",
       "author": "Vijayaramanan",
