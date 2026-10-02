@@ -1,6 +1,22 @@
 {
   "articles": [
     {
+      "slug": "chatgpt-6-astra",
+      "title": "ChatGPT-6 Astra Explained: Computer-Using AI, Frontier Benchmarks, Safety, and Real-World Reviews",
+      "author": "Vijayaramanan",
+      "date": "19 Sep 2026",
+      "category": "Emerging Technologies",
+      "tags": [
+        "GPT-6 Astra",
+        "ChatGPT",
+        "AI agents",
+        "computer use",
+        "AI safety"
+      ],
+      "readTime": "12 min read",
+      "excerpt": "GPT-6 Astra is presented as OpenAI's most capable model for end-to-end work. Its defining advance is not conversation alone, but the ability to reason across software, browsers, code, and professional workflows while operating a computer."
+    },
+    {
       "slug": "how-to-build-low-cost-earthquake-monitor-raspberry-shake",
       "title": "How to Build a Low-Cost Earthquake Monitor with Raspberry Shake",
       "author": "Vijayaramanan",
@@ -150,7 +166,7 @@
         "AI safety"
       ],
       "readTime": "15 min read",
-      "excerpt": "An autonomous AI agent is not a larger prompt wrapped around an LLM. It is a closed-loop system combining state, planning, memory, tools, permissions, evaluation, and human oversight. This guide explains how those layers fit together—and where production systems fail."
+      "excerpt": "An autonomous AI agent is not a larger prompt wrapped around an LLM. It is a closed-loop system combining state, planning, memory, tools, permissions, evaluation, and human oversight. This guide explains how those layers fit together\u2014and where production systems fail."
     },
     {
       "slug": "post-titanium-super-steel-green-hydrogen",
@@ -166,7 +182,7 @@
         "corrosion science"
       ],
       "readTime": "14 min read",
-      "excerpt": "A new generation of corrosion-resistant “super steel” could replace selected titanium components in PEM electrolyzers, cutting material costs while surviving high-voltage, chloride-rich conditions."
+      "excerpt": "A new generation of corrosion-resistant \u201csuper steel\u201d could replace selected titanium components in PEM electrolyzers, cutting material costs while surviving high-voltage, chloride-rich conditions."
     },
     {
       "slug": "warp-metric-engineering",
